@@ -1,0 +1,100 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Site Visits — Codelayer Technologies{% endblock %}
+
+{% block content %}
+
+    <section class="about-header" style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('{% static 'images/2150377138.jpg' %}') no-repeat top center / cover;">
+        <div class="container h-100 d-flex align-items-center justify-content-center">
+            <div class="about-content text-center text-white">
+                <div class="product-badge">Site Visits</div>
+                <h1 class="mt-3 mb-3">See GrowBiz ERP Running Live.</h1>
+                <p class="lead mx-auto" style="max-width: 700px;">
+                    Nothing sells confidence like seeing real software running in a real plant. We arrange scheduled visits to live GrowBiz ERP client sites across Kerala and South India.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ══════════ IMPLEMENTATION ══════════ -->
+
+    <section class="impl-section" id="implementation" style="background-image: linear-gradient(rgba(244, 250, 248, 0.9), rgba(244, 250, 248, 0.9)), url('{% static 'images/2151307749.webp' %}');">
+      <div class="container">
+        <div class="row g-5 align-items-start">
+          <div class="col-lg-5 reveal visible">
+            <div class="section-tag">How It Works</div>
+            <h2 class="heading-1 mb-4 text-start">Simple 3-Step Process</h2>
+            <p class="sub-heading-1 mb-4">We coordinate everything — from choosing the right client site to arranging the visit schedule. All you need to do is show up with your questions.</p>
+            <div class="box-123 mt-4 p-3">
+              <div class="text-501">What you'll see on a visit</div>
+              <div style="display:flex;flex-wrap:wrap;gap:.4rem;">
+                  <span style="background:rgba(30,200,160,.08);border:1px solid rgba(30,200,160,.16);color:#1ec8a0;font-size:.73rem;padding:.18rem .6rem;border-radius:100px;">Live Weighbridge</span>
+                  <span style="background:rgba(30,200,160,.08);border:1px solid rgba(30,200,160,.16);color:#1ec8a0;font-size:.73rem;padding:.18rem .6rem;border-radius:100px;">Gatepass Flow</span>
+                  <span style="background:rgba(30,200,160,.08);border:1px solid rgba(30,200,160,.16);color:#1ec8a0;font-size:.73rem;padding:.18rem .6rem;border-radius:100px;">Real-time Dashboards</span>
+                  <span style="background:rgba(30,200,160,.08);border:1px solid rgba(30,200,160,.16);color:#1ec8a0;font-size:.73rem;padding:.18rem .6rem;border-radius:100px;">Fleet Tracking</span>
+                  <span style="background:rgba(30,200,160,.08);border:1px solid rgba(30,200,160,.16);color:#1ec8a0;font-size:.73rem;padding:.18rem .6rem;border-radius:100px;">Mobile App Usage</span>
+                  <span style="background:rgba(30,200,160,.08);border:1px solid rgba(30,200,160,.16);color:#1ec8a0;font-size:.73rem;padding:.18rem .6rem;border-radius:100px;">Billing Module</span>
+                </div>
+            </div>
+          </div>
+          <div class="col-lg-7 reveal visible" style="transition-delay:.12s;">
+            <div class="impl-step"><div class="impl-num">01</div><div><h6>Submit a Request</h6>
+                <p>Fill in our site visit request form with your industry type, team size, and preferred date range. Takes under 2 minutes.</p></div>
+            </div>
+            <div class="impl-connector"></div>
+            <div class="impl-step"><div class="impl-num">02</div><div>
+                <h6>We Match You to a Site</h6>
+                <p>We identify the most relevant live client site based on your industry — quarry, RMC, brick, or manufacturing — and coordinate with them.</p></div>
+            </div>
+            <div class="impl-connector"></div>
+            <div class="impl-step"><div class="impl-num">03</div><div>
+                <h6>Attend & Ask Freely</h6>
+                <p>Visit the site with our ERP consultant. See the system live, speak to the actual users, and ask any question without sales pressure.</p></div>
+            </div>
+            <div class="impl-connector"></div>
+            <div class="impl-step"><div class="impl-num">04</div><div>
+                <h6>Get a Tailored Proposal</h6>
+                <p>After the visit, if you're interested, we build a customized ERP proposal specifically for your plant size and requirements.</p></div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="gallery-section py-5">
+      <div class="container">
+        <div class="row g-4">
+          {% for item in images %}
+          <div class="col-md-6 col-lg-4 reveal visible">
+            <div class="gallery-card" onclick="openLightbox('{{ item.image.url }}', '{{ item.site_name }}')">
+              <div class="gc-img-container">
+                <img src="{{ item.image.url }}" alt="{{ item.site_name }}" class="img-fluid">
+                <div class="gc-overlay">
+                  <i class="bi bi-fullscreen"></i>
+                </div>
+              </div>
+              <div class="gc-body p-3 border border-top-0 rounded-bottom">
+                <h5 class="mb-1">{{ item.site_name }}</h5>
+                <div class="gc-meta d-flex justify-content-between text-muted" style="font-size: 0.85rem;">
+                  <span><i class="bi bi-geo-alt"></i> {{ item.location }}</span>
+                  <span><i class="bi bi-calendar-event"></i> {{ item.visit_date|date:"M d, Y" }}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </section>
+
+    <div id="galleryLightbox" class="custom-lightbox" onclick="closeLightbox()">
+      <span class="close-btn">&times;</span>
+      <img class="lightbox-content" id="lightboxImg">
+      <div id="lightboxCaption"></div>
+    </div>
+
+
+
+{% endblock %}

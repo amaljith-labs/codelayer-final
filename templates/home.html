@@ -1,0 +1,1178 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Home — Codelayer Technologies{% endblock %}
+
+{% block content %}
+
+  <section class="header">
+
+    <video class="hero-video" autoplay muted loop playsinline>
+      <source src="{% static 'videos/hero_video.mp4' %}" type="video/mp4">
+    </video>
+
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content text-center">
+      <div class="hero-inner">
+        <h1 class="hero-title text-white mb-4">
+          <span id="typed-text" style="opacity: 1;">Intelligent Solutions</span> for a Digital-First World.
+        </h1>
+        <p class="hero-subtitle mx-auto mb-4">
+          Empowering industries with custom software, cloud ERPs, and specialized tools that turn operational complexity into sustainable growth.
+        </p>
+        <div class="d-flex gap-3 justify-content-center flex-wrap">
+          <a href="{% url 'code_app:contact' %}" class="btn btn-light fw-semibold px-4 py-2">Request a demo</a>
+          <a href="{% url 'code_app:about' %}" class="btn hero-btn-outline px-4 py-2">Learn more</a>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <div class="container">
+    <div class="text-show-section">
+      <h2 class="scroll-show-text" id="scrollText">
+        Efficiency is the backbone of growth. Our ERP systems are engineered to track every ton, every lead, and every transaction—giving
+        you the total control required to scale without the friction of traditional systems.
+      </h2>
+    </div>
+  </div>
+
+  <div class="about-us-section">
+    <div class="container">
+      <div class="row row-cols-1 row-cols-md-2 g-4">
+        <div class="col-md-3">
+          <img src="{% static 'images/pexels-tiger-lily-7109017.jpg' %}" class="img-fluid about-us-img" alt="...">
+        </div>
+        <div class="col-md-9">
+          <div class="about-inner text-center">
+            <div class="product-badge">Welcome to Codelayer</div>
+            <span class="btn btn-pill d-none">Welcome to Codelayer</span>
+            <h2 class="heading-1">Decades of Innovation, Built for Your Success.</h2>
+            <p class="sub-heading-1 text-center">
+              Since 2000, Codelayer has been at the forefront of digital transformation. We don't just build
+              software; we architect solutions that empower businesses to operate with absolute efficiency
+              and unmatched reliability.
+            </p>
+            <!-- Stats grid -->
+            <div class="row g-3 mt-3 mb-3">
+              <div class="col-6 col-lg-3">
+                <div class="stat-card">
+                  <span class="stat-number">25+</span>
+                  <span class="stat-label">Years of Experience</span>
+                </div>
+              </div>
+              <div class="col-6 col-lg-3">
+                <div class="stat-card">
+                  <span class="stat-number">600+</span>
+                  <span class="stat-label">Enterprise Clients</span>
+                </div>
+              </div>
+              <div class="col-6 col-lg-3">
+                <div class="stat-card">
+                  <span class="stat-number">50+</span>
+                  <span class="stat-label">Team Members</span>
+                </div>
+              </div>
+              <div class="col-6 col-lg-3">
+                <div class="stat-card">
+                  <span class="stat-number">15+</span>
+                  <span class="stat-label">Industry Served</span>
+                </div>
+              </div>
+            </div>
+
+            <a href="{% url 'code_app:about' %}" class="btn-hero-ghost">
+              Know More
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3 8H13M13 8L8.5 3.5M13 8L8.5 12.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-2">
+    <div class="container">
+
+      <div class="row row-cols-1 row-cols-md-2 g-5">
+        <div class="col-md-6">
+
+          <div class="odoo-content">
+
+            <!-- Badge -->
+            <span class="odoo-badge">
+              <img src="{% static 'icons/material-symbols-light_crown-outline.svg' %}" alt=""> Official Odoo Partner
+            </span>
+
+            <!-- Heading -->
+            <h2 class="odoo-heading">We're <br> an Odoo Channel Partner.</h2>
+
+            <!-- Body text -->
+            <p class="odoo-text">
+              Odoo is a globally recognized, all-in-one enterprise resource planning (ERP) platform that
+              integrates all core business functions into a single, unified system. It offers a wide range of
+              applications including accounting, inventory, sales, procurement, human resources, manufacturing,
+              and customer relationship management (CRM).
+            </p>
+            <p class="odoo-text">
+              Designed for flexibility and scalability, Odoo allows businesses to automate processes, improve
+              collaboration, and gain real-time insights into their operations. Its modular structure enables
+              organizations to start with essential features and expand as their business grows.
+            </p>
+
+            <div class="d-flex align-items-center flex-wrap gap-3">
+                <img src="{% static 'icons/odoo_logo.svg' %}" class="img-fluid odoo-img" alt="Odoo Logo">
+
+                <a href="https://www.odoo.com/" target="_blank" class="btn odoo-cta d-inline-flex align-items-center">
+                    Learn More About Odoo
+                    <img src="{% static 'icons/stash_arrow-up.svg' %}" class="ms-2" alt="" style="width: 16px;">
+                </a>
+            </div>
+
+          </div>
+
+        </div>
+        <div class="col-md-6 text-center">
+
+          <video width="100%" height="auto" autoplay muted loop playsinline poster="path/to/placeholder-image.jpg" class="img-fluid rounded shadow">
+              <source src="static/videos/video_odoo_sec.webm" type="video/webm">
+              Your browser does not support the video tag.
+          </video>
+
+          <!-- Tags -->
+          <div class="odoo-tags">
+            <span class="odoo-tag">Odoo ERP</span>
+            <span class="odoo-tag">Odoo CRM</span>
+            <span class="odoo-tag">Odoo Accounting</span>
+            <span class="odoo-tag">Odoo HR</span>
+            <span class="odoo-tag">Odoo Manufacturing</span>
+            <span class="odoo-tag">Odoo eCommerce</span>
+          </div>
+
+
+          <div class="row g-3 d-none">
+
+            <div class="col-6">
+              <div class="feature-card">
+                <div class="feature-icon">
+                  <img src="{% static 'icons/mdi_thunder.svg' %}" alt="">
+                </div>
+                <h6 class="feature-title">All-in-One Suite</h6>
+                <p class="feature-desc">Replace 10 disconnected tools with a single, unified platform.</p>
+              </div>
+            </div>
+
+            <div class="col-6">
+              <div class="feature-card">
+                <div class="feature-icon">
+                  <img src="{% static 'icons/mdi_progress-spanner.svg' %}" alt="" width="20" height="20">
+                </div>
+                <h6 class="feature-title">Fully Customisable</h6>
+                <p class="feature-desc">Tailor every workflow, report, and module to your exact processes.</p>
+              </div>
+            </div>
+
+            <div class="col-6">
+              <div class="feature-card">
+                <div class="feature-icon">
+                  <img src="{% static 'icons/solar_cloud-bold-duotone.svg' %}" alt="" width="20" height="20">
+                </div>
+                <h6 class="feature-title">Cloud or On-Premise</h6>
+                <p class="feature-desc">Deploy on Odoo SaaS cloud or your own secure infrastructure.</p>
+              </div>
+            </div>
+
+            <div class="col-6">
+              <div class="feature-card">
+                <div class="feature-icon">
+                  <img src="{% static 'icons/boxicons_mobile.svg' %}" alt="" width="20" height="20">
+                </div>
+                <h6 class="feature-title">Mobile Ready</h6>
+                <p class="feature-desc">Full-featured mobile apps for iOS and Android — work anywhere.</p>
+              </div>
+            </div>
+
+            <div class="col-12">
+              <div class="feature-card">
+                <div class="feature-icon">
+                  <img src="{% static 'icons/uiw_global.svg' %}" alt="" width="20" height="20">
+                </div>
+                <h6 class="feature-title">Global & Compliant</h6>
+                <p class="feature-desc">Multi-currency, multi-language, multi-company support. Localised for 150+ countries including GST, VAT, and local tax rules.</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="row mt-5 g-3">
+
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="feature-card">
+              <div class="feature-icon">
+                <img src="{% static 'icons/mdi_thunder.svg' %}" alt="">
+              </div>
+              <h6 class="feature-title">All-in-One Suite</h6>
+              <p class="feature-desc">Replace 10 disconnected tools with a single, unified platform.</p>
+            </div>
+          </div>
+
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="feature-card">
+              <div class="feature-icon">
+                <img src="{% static 'icons/mdi_progress-spanner.svg' %}" alt="" width="20" height="20">
+              </div>
+              <h6 class="feature-title">Fully Customisable</h6>
+              <p class="feature-desc">Tailor every workflow, report, and module to your exact processes.</p>
+            </div>
+          </div>
+
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="feature-card">
+              <div class="feature-icon">
+                <img src="{% static 'icons/solar_cloud-bold-duotone.svg' %}" alt="" width="20" height="20">
+              </div>
+              <h6 class="feature-title">Cloud or On-Premise</h6>
+              <p class="feature-desc">Deploy on Odoo SaaS cloud or your own secure infrastructure.</p>
+            </div>
+          </div>
+
+          <div class="col-12 col-sm-6 col-lg-3 d-none">
+            <div class="feature-card">
+              <div class="feature-icon">
+                <img src="{% static 'icons/boxicons_mobile.svg' %}" alt="" width="20" height="20">
+              </div>
+              <h6 class="feature-title">Mobile Ready</h6>
+              <p class="feature-desc">Full-featured mobile apps for iOS and Android — work anywhere.</p>
+            </div>
+          </div>
+
+          <div class="col-12 col-sm-6 col-lg-3">
+            <div class="feature-card">
+              <div class="feature-icon">
+                <img src="{% static 'icons/uiw_global.svg' %}" alt="" width="20" height="20">
+              </div>
+              <h6 class="feature-title">Global & Compliant</h6>
+              <p class="feature-desc">Multi-currency, multi-language, multi-company support. Localised for 150+ countries including GST, VAT, and local tax rules.</p>
+            </div>
+          </div>
+
+      </div>
+
+    </div>
+  </div>
+
+  <div class="section-3">
+    <div class="container">
+
+      <div class="text-center"><div class="product-badge">Why Choose Us</div></div>
+      <div  class="mx-auto" style="max-width: 37.813rem;">
+        <h2 class="heading-1 mb-4">Industry-Specific Power, Fully Customized.</h2>
+        <p class="sub-heading-1 text-center mb-4">
+          Delivering 25 years of expertise in turning disconnected processes into scalable, high-performance digital ecosystems
+        </p>
+      </div>
+
+      <div class="row align-items-center g-5">
+
+        <!-- Left: Accordion -->
+        <div class="col-md-6">
+          <div class="accordion services-accordion" id="servicesAccordion">
+
+            <div class="accordion-item service-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button service-btn" type="button"
+                  data-bs-toggle="collapse" data-bs-target="#service0"
+                  aria-expanded="true" aria-controls="service0"
+                  data-index="0">
+                  25+ Years of Proven Expertise
+                </button>
+              </h2>
+              <div id="service0" class="accordion-collapse collapse show"
+                data-bs-parent="#servicesAccordion">
+                <div class="accordion-body service-body">
+                  Since our humble beginnings in 2000, we have been a leading IT consulting and services organization focused on enabling flexible, efficient business practices.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item service-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button service-btn collapsed" type="button"
+                  data-bs-toggle="collapse" data-bs-target="#service1"
+                  aria-expanded="false" aria-controls="service1"
+                  data-index="1">
+                  Specialized Industry Focus
+                </button>
+              </h2>
+              <div id="service1" class="accordion-collapse collapse"
+                data-bs-parent="#servicesAccordion">
+                <div class="accordion-body service-body">
+                  Unlike generic systems, our GrowBiz ERP provides industry-specific workflows for specialized sectors like Quarry, Crusher, and Ready-Mix Concrete (RMC) operations.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item service-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button service-btn collapsed" type="button"
+                  data-bs-toggle="collapse" data-bs-target="#service2"
+                  aria-expanded="false" aria-controls="service2"
+                  data-index="2">
+                  Highly Customizable & Scalable
+                </button>
+              </h2>
+              <div id="service2" class="accordion-collapse collapse"
+                data-bs-parent="#servicesAccordion">
+                <div class="accordion-body service-body">
+                  We believe every business is different; our modularized architecture allows you to implement only what you need and tailor every workflow to your exact requirements.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item service-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button service-btn collapsed" type="button"
+                  data-bs-toggle="collapse" data-bs-target="#service3"
+                  aria-expanded="false" aria-controls="service3"
+                  data-index="3">
+                  Unified All-in-One Platform
+                </button>
+              </h2>
+              <div id="service3" class="accordion-collapse collapse"
+                data-bs-parent="#servicesAccordion">
+                <div class="accordion-body service-body">
+                  We replace disconnected tools with a single, comprehensive solution that integrates CRM, Accounting, Manufacturing, and HR to eliminate data silos.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item service-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button service-btn collapsed" type="button"
+                  data-bs-toggle="collapse" data-bs-target="#service4"
+                  aria-expanded="false" aria-controls="service4"
+                  data-index="4">
+                  Flexible Deployment & Global Reach
+                </button>
+              </h2>
+              <div id="service4" class="accordion-collapse collapse"
+                data-bs-parent="#servicesAccordion">
+                <div class="accordion-body service-body">
+                  Whether you prefer the Odoo SaaS cloud or your own on-premise infrastructure, our solutions support multi-currency and multi-language operations localized for 150+ countries
+                </div>
+              </div>
+            </div>
+
+
+
+
+
+          </div>
+        </div>
+
+        <!-- Right: Lottie -->
+        <div class="col-md-6 d-flex align-items-center justify-content-center">
+          <div class="lottie-wrapper">
+            <!-- Each lottie corresponds to a service item by index -->
+
+            <dotlottie-wc class="lottie-player active"
+              src="{% static 'animations/BusinessManagement.lottie' %}"
+              data-index="0"
+              autoplay loop>
+            </dotlottie-wc>
+
+            <dotlottie-wc class="lottie-player"
+              src="{% static 'animations/Isometricdataanalysis.lottie' %}"
+              data-index="1"
+              autoplay loop>
+            </dotlottie-wc>
+
+            <dotlottie-wc class="lottie-player"
+              src="{% static 'animations/maintenancecybersecurity.lottie' %}"
+              data-index="2"
+              autoplay loop>
+            </dotlottie-wc>
+
+            <dotlottie-wc class="lottie-player"
+              src="{% static 'animations/AnimatedDashboards.lottie' %}"
+              data-index="3"
+              autoplay loop>
+            </dotlottie-wc>
+
+            <dotlottie-wc class="lottie-player"
+              src="{% static 'animations/Web_Maintenance.lottie' %}"
+              data-index="4"
+              autoplay loop>
+            </dotlottie-wc>
+
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+  <div class="section-2">
+    <div class="container">
+
+      <div class="row align-items-center">
+
+        <!-- Left -->
+        <div class="col-md-6">
+          <div class="product-badge">Our Solutions</div>
+          <h2 class="heading-1 text-start">Integrated Products for Every Team.</h2>
+        </div>
+
+        <!-- Right -->
+        <div class="col-md-6">
+          <p class="sub-heading-1 text-start mb-4">
+            Since 2000, Codelayer has been at the forefront of digital transformation. We don't just build
+            software; we architect solutions that empower businesses to operate with absolute efficiency
+            and unmatched reliability.
+          </p>
+          <a href="#" class="btn-hero-ghost d-none">
+            View All Products
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M3 8H13M13 8L8.5 3.5M13 8L8.5 12.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+        </div>
+
+      </div>
+
+      <div class="content-section-1">
+
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+
+          <div class="col">
+            <div class="card product-card h-100" style="background-image: url('{% static 'images/356.jpg' %}');">
+              <div class="card-body d-flex flex-column d-flex flex-column gap-4">
+
+                <div class="head-of-card">
+                  <div class="product-icon">
+                    <img src="{% static 'icons/token_perp.svg' %}" alt="">
+                  </div>
+
+                  <h5 class="product-title">Quarry & Crusher ERP</h5>
+                </div>
+
+                <div class="desc-of-card">
+                  <p class="product-desc">
+                    A specialized ERP built for quarrying, crushing, and construction materials.
+                    Handles weighbridge, gatepass, dispatch, fleet, and financial operations with
+                    real-time production and material tracking.
+                  </p>
+
+                  <div class="product-tag">
+                    <img src="{% static 'icons/hugeicons_tick-01.svg' %}" alt="">
+                    Eliminate data silos instantly
+                  </div>
+                </div>
+
+                <a href="{% url 'code_app:quarry_crusher' %}" class="product-link mt-auto">
+                  Explore Quarry & Crusher ERP
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <path d="M3 8H13M13 8L8.5 3.5M13 8L8.5 12.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </a>
+
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card product-card h-100" style="background-image: url('{% static 'images/678.jpg' %}');">
+              <div class="card-body d-flex flex-column d-flex flex-column gap-4">
+
+                <div class="head-of-card">
+                  <div class="product-icon">
+                    <img src="{% static 'icons/token_perp.svg' %}" alt="">
+                  </div>
+
+                  <h5 class="product-title">Ready-Mix Concrete (RMC) ERP</h5>
+                </div>
+
+                <div class="desc-of-card">
+                  <p class="product-desc">
+                    Built for ready-mix concrete plants — manages batching, mix design, dispatch,
+                    quality control, and delivery coordination with real-time visibility across
+                    all plant operations.
+                  </p>
+
+                  <div class="product-tag">
+                    <img src="{% static 'icons/hugeicons_tick-01.svg' %}" alt="">
+                    Built for time-critical dispatch
+                  </div>
+                </div>
+
+                <a href="{% url 'code_app:ready_mix_erp' %}" class="product-link mt-auto">
+                  Explore RMC ERP
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <path d="M3 8H13M13 8L8.5 3.5M13 8L8.5 12.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </a>
+
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card product-card h-100" style="background-image: url('{% static 'images/123.jpg' %}');">
+              <div class="card-body d-flex flex-column d-flex flex-column gap-4">
+
+                <div class="head-of-card">
+                  <div class="product-icon">
+                    <img src="{% static 'icons/token_perp.svg' %}">
+                  </div>
+
+                  <h5 class="product-title">Brick ERP</h5>
+                </div>
+
+                <div class="desc-of-card">
+                  <p class="product-desc">
+                      It is built to handle the continuous, process-driven nature of brick
+                      manufacturing operations, ,
+                      production, inventory, and dispatch.
+                  </p>
+
+                  <div class="product-tag">
+                    <img src="{% static 'icons/hugeicons_tick-01.svg' %}" alt="">
+                    Suits for all
+                  </div>
+                </div>
+
+                <a href="{% url 'code_app:brick_erp' %}" class="product-link mt-auto">
+                  Explore Brick ERP
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <path d="M3 8H13M13 8L8.5 3.5M13 8L8.5 12.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </a>
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+    </div>
+  </div>
+
+  <div class="section-2">
+    <div class="container">
+
+      <div class="text-center"><div class="product-badge">General ERP Modules</div></div>
+      <div  class="mx-auto" style="max-width: 37.813rem;">
+        <h2 class="heading-1 mb-4" style="">One Platform. Every Operation.</h2>
+      </div>
+
+      <div class="content-section-1">
+
+        <div class="marquee-container">
+          <div class="drag-wrapper" style="display: flex; cursor: grab;">
+          <div class="marquee-content">
+
+            <div class="module-card-wrapper">
+              <div class="card module-card-1" style="background-image: url('{% static 'images/2150169860.jpg' %}');">
+                <div class="card-body d-flex flex-column justify-content-between">
+                  <div class="module-icon">
+                     <img src="{% static 'icons/icons8-crm-58.png' %}" alt="">
+                  </div>
+                  <h5 class="module-title mb-0">CRM</h5>
+                </div>
+              </div>
+            </div>
+
+            <div class="module-card-wrapper">
+              <div class="card module-card-1" style="background-image: url('{% static 'images/2148780634.jpg' %}');">
+                <div class="card-body d-flex flex-column justify-content-between">
+                  <div class="module-icon">
+                     <img src="{% static 'icons/icons8-sales-performance-50.png' %}" alt="">
+                  </div>
+                  <h5 class="module-title mb-0">Sales Mines</h5>
+                </div>
+              </div>
+            </div>
+
+            <div class="module-card-wrapper">
+              <div class="card module-card-1" style="background-image: url('{% static 'images/126795.jpg' %}');">
+                <div class="card-body d-flex flex-column justify-content-between">
+                  <div class="module-icon">
+                     <img src="{% static 'icons/icons8-maintenance-50.png' %}" alt="">
+                  </div>
+                  <h5 class="module-title mb-0">Maintenance</h5>
+                </div>
+              </div>
+            </div>
+
+            <div class="module-card-wrapper">
+              <div class="card module-card-1" style="background-image: url('{% static 'images/2151989558.jpg' %}');">
+                <div class="card-body d-flex flex-column justify-content-between">
+                  <div class="module-icon">
+                     <img src="{% static 'icons/icons8-management-503.png' %}" alt="">
+                  </div>
+                  <h5 class="module-title mb-0">Fleet Management</h5>
+                </div>
+              </div>
+            </div>
+
+            <div class="module-card-wrapper">
+              <div class="card module-card-1" style="background-image: url('{% static 'images/126.jpg' %}');">
+                <div class="card-body d-flex flex-column justify-content-between">
+                  <div class="module-icon">
+                     <img src="{% static 'icons/icons8-ledger-50.png' %}" alt="">
+                  </div>
+                  <h5 class="module-title mb-0">Accounts & Finance</h5>
+                </div>
+              </div>
+            </div>
+
+            <div class="module-card-wrapper">
+              <div class="card module-card-1" style="background-image: url('{% static 'images/396.jpg' %}');">
+                <div class="card-body d-flex flex-column justify-content-between">
+                  <div class="module-icon">
+                     <img src="{% static 'icons/icons8-production-50.png' %}" alt="">
+                  </div>
+                  <h5 class="module-title mb-0">Production</h5>
+                </div>
+              </div>
+            </div>
+
+            <div class="module-card-wrapper">
+              <div class="card module-card-1" style="background-image: url('{% static 'images/32699.jpg' %}');">
+                <div class="card-body d-flex flex-column justify-content-between">
+                  <div class="module-icon">
+                     <img src="{% static 'icons/icons8-management-50.png' %}" alt="">
+                  </div>
+                  <h5 class="module-title mb-0">Quarry and Crusher Management</h5>
+                </div>
+              </div>
+            </div>
+
+            <div class="module-card-wrapper">
+              <div class="card module-card-1" style="background-image: url('{% static 'images/35514.jpg' %}');">
+                <div class="card-body d-flex flex-column justify-content-between">
+                  <div class="module-icon">
+                     <img src="{% static 'icons/icons8-concrete-pump-50.png' %}" alt="">
+                  </div>
+                  <h5 class="module-title mb-0">Ready-Mix Concrete Management</h5>
+                </div>
+              </div>
+            </div>
+
+            <div class="module-card-wrapper">
+              <div class="card module-card-1" style="background-image: url('{% static 'images/76092.jpg' %}');">
+                <div class="card-body d-flex flex-column justify-content-between">
+                  <div class="module-icon">
+                     <img src="{% static 'icons/icons8-pos-terminal-50.png' %}" alt="">
+                  </div>
+                  <h5 class="module-title mb-0">POS (point of sales)</h5>
+                </div>
+              </div>
+            </div>
+
+            <div class="module-card-wrapper">
+              <div class="card module-card-1" style="background-image: url('{% static 'images/2153.jpg' %}');">
+                <div class="card-body d-flex flex-column justify-content-between">
+                  <div class="module-icon">
+                     <img src="{% static 'icons/icons8-human-resources-50.png' %}" alt="">
+                  </div>
+                  <h5 class="module-title mb-0">HR & Employee Management</h5>
+                </div>
+              </div>
+            </div>
+
+            <div class="module-card-wrapper">
+              <div class="card module-card-1" style="background-image: url('{% static 'images/5.jpg' %}');">
+                <div class="card-body d-flex flex-column justify-content-between">
+                  <div class="module-icon">
+                     <img src="{% static 'icons/icons8-purchase-50.png' %}" alt="">
+                  </div>
+                  <h5 class="module-title mb-0">Purchase</h5>
+                </div>
+              </div>
+            </div>
+
+            <div class="module-card-wrapper">
+              <div class="card module-card-1" style="background-image: url('{% static 'images/74058.jpg' %}');">
+                <div class="card-body d-flex flex-column justify-content-between">
+                  <div class="module-icon">
+                     <img src="{% static 'icons/icons8-inventory-50.png' %}" alt="">
+                  </div>
+                  <h5 class="module-title mb-0">Inventory</h5>
+                </div>
+              </div>
+            </div>
+
+            <div class="module-card-wrapper">
+              <div class="card module-card-1" style="background-image: url('{% static 'images/132327.jpg' %}');">
+                <div class="card-body d-flex flex-column justify-content-between">
+                  <div class="module-icon">
+                     <img src="{% static 'icons/fluent-mdl2_financial.svg' %}" alt="">
+                  </div>
+                  <h5 class="module-title mb-0">Sales</h5>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+
+        </div>
+
+
+
+      </div>
+
+    </div>
+  </div>
+
+  <div class="section-2">
+    <div class="container">
+      <h2 class="heading-1 mb-4">Trusted by Industry Leaders</h2>
+
+      <!-- Full width marquee — outside container intentionally -->
+      <div class="marquee-wrapper mt-4">
+        <div class="marquee-track">
+
+          <!-- First set -->
+          <div class="marquee-item">
+            <img src="{% static 'images/best_rmc_logo.svg' %}">
+          </div>
+          <div class="marquee-item">
+            <img src="{% static 'images/poabs.svg' %}">
+          </div>
+          <div class="marquee-item">
+            <img src="{% static 'images/geomix.svg' %}">
+          </div>
+          <div class="marquee-item">
+            <img src="{% static 'images/aonesands.svg' %}">
+          </div>
+          <div class="marquee-item">
+            <img src="{% static 'images/ksgranite.svg' %}">
+          </div>
+          <div class="marquee-item">
+            <img src="{% static 'images/terrasand.svg' %}">
+          </div>
+          <div class="marquee-item">
+            <img src="{% static 'images/excel_auto_electricals.svg' %}">
+          </div>
+          <div class="marquee-item">
+            <img src="{% static 'images/nalakath_group.svg' %}">
+          </div>
+          <div class="marquee-item">
+            <img src="{% static 'images/vismayarocks.svg' %}">
+          </div>
+          <div class="marquee-item">
+            <img src="{% static 'images/nalakath_sand.svg' %}">
+          </div>
+          <div class="marquee-item">
+            <img src="{% static 'images/nalakath_granites.svg' %}">
+          </div>
+          <div class="marquee-item">
+            <img src="{% static 'images/nalakath_metals.svg' %}">
+          </div>
+          <div class="marquee-item">
+            <img src="{% static 'images/mix_ready_mix.svg' %}">
+          </div>
+          <div class="marquee-item">
+            <img src="{% static 'images/nalakath_crafts.svg' %}">
+          </div>
+          <div class="marquee-item">
+            <img src="{% static 'images/nalakath_qbricks.svg' %}">
+          </div>
+          <div class="marquee-item">
+            <img src="{% static 'images/nalakath_asphalt.svg' %}">
+          </div>
+          <div class="marquee-item">
+            <img src="{% static 'images/friends_crushers.svg' %}">
+          </div>
+          <div class="marquee-item">
+            <img src="{% static 'images/alpha_sand.svg' %}">
+          </div>
+          <div class="marquee-item">
+            <img src="{% static 'images/peejay.svg' %}">
+          </div>
+
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="section-2">
+    <div class="container">
+
+      <div class="row align-items-center">
+
+        <!-- Left -->
+        <div class="col-md-6">
+          <div class="product-badge">Our Services</div>
+          <h2 class="heading-1 text-start">End-to-End Services, Zero Compromise.</h2>
+        </div>
+
+        <!-- Right -->
+        <div class="col-md-6">
+          <p class="sub-heading-1 text-start mb-4">
+            From sales to inventory, HR to finance - our comprehensive suite of products covers all aspects of your business operations.
+          </p>
+          <a href="{% url 'code_app:services' %}" class="btn-hero-ghost">
+            View All Services
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M3 8H13M13 8L8.5 3.5M13 8L8.5 12.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+        </div>
+
+      </div>
+
+      <div class="row mt-5 g-3">
+
+        <!-- 1. ERP Implementation -->
+        <div class="col-6 col-md-4 col-lg-2-4">
+          <div class="card service-card">
+            <img class="card-bg-img" src="{% static 'images/2151944858.jpg' %}" alt="ERP Implementation" />
+            <div class="card-gradient"></div>
+            <div class="card-arrow">
+              <svg viewBox="0 0 14 14" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 11L11 3M11 3H5M11 3v6"/>
+              </svg>
+            </div>
+            <div class="card-title-static">ERP Implementation</div>
+            <div class="card-desc-panel">
+              <p class="desc-title">ERP Implementation</p>
+              <p class="desc-text">Complete system setup, configuration, and deployment for a smooth transition to the new ERP system.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. Business Analysis -->
+        <div class="col-6 col-md-4 col-lg-2-4">
+          <div class="card service-card">
+            <img class="card-bg-img" src="{% static 'images/16001.jpg' %}" alt="Business Analysis & Consultation" />
+            <div class="card-gradient"></div>
+            <div class="card-arrow">
+              <svg viewBox="0 0 14 14" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 11L11 3M11 3H5M11 3v6"/>
+              </svg>
+            </div>
+            <div class="card-title-static">Business Analysis & Consultation</div>
+            <div class="card-desc-panel">
+              <p class="desc-title">Business Analysis & Consultation</p>
+              <p class="desc-text">We analyze your workflows and recommend optimized ERP solutions aligned with your business goals.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. Customization -->
+        <div class="col-6 col-md-4 col-lg-2-4">
+          <div class="card service-card">
+            <img class="card-bg-img" src="{% static 'images/33535.jpg' %}" alt="Customization & Development" />
+            <div class="card-gradient"></div>
+            <div class="card-arrow">
+              <svg viewBox="0 0 14 14" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 11L11 3M11 3H5M11 3v6"/>
+              </svg>
+            </div>
+            <div class="card-title-static">Customization & Development</div>
+            <div class="card-desc-panel">
+              <p class="desc-title">Customization & Development</p>
+              <p class="desc-text">We tailor the ERP system to match your operational workflows precisely for a perfect business fit.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. Integration -->
+        <div class="col-6 col-md-4 col-lg-2-4">
+          <div class="card service-card">
+            <img class="card-bg-img" src="{% static 'images/128572.jpg' %}" alt="Integration Services" />
+            <div class="card-gradient"></div>
+            <div class="card-arrow">
+              <svg viewBox="0 0 14 14" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 11L11 3M11 3H5M11 3v6"/>
+              </svg>
+            </div>
+            <div class="card-title-static">Integration Services</div>
+            <div class="card-desc-panel">
+              <p class="desc-title">Integration Services</p>
+              <p class="desc-text">Seamless integration with third-party systems and hardware to ensure smooth data flow and efficiency.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5. Data Migration -->
+        <div class="col-6 col-md-4 col-lg-2-4">
+          <div class="card service-card">
+            <img class="card-bg-img" src="{% static 'images/64675.jpg' %}" alt="Data Migration" />
+            <div class="card-gradient"></div>
+            <div class="card-arrow">
+              <svg viewBox="0 0 14 14" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 11L11 3M11 3H5M11 3v6"/>
+              </svg>
+            </div>
+            <div class="card-title-static">Data Migration</div>
+            <div class="card-desc-panel">
+              <p class="desc-title">Data Migration</p>
+              <p class="desc-text">Secure and accurate migration of essential master data from legacy systems to the new ERP platform.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 6. Training -->
+        <div class="col-6 col-md-4 col-lg-2-4">
+          <div class="card service-card">
+            <img class="card-bg-img" src="{% static 'images/2799.jpg' %}" alt="Training & User Onboarding" />
+            <div class="card-gradient"></div>
+            <div class="card-arrow">
+              <svg viewBox="0 0 14 14" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 11L11 3M11 3H5M11 3v6"/>
+              </svg>
+            </div>
+            <div class="card-title-static">Training & User Onboarding</div>
+            <div class="card-desc-panel">
+              <p class="desc-title">Training & User Onboarding</p>
+              <p class="desc-text">Comprehensive training so your team can effectively operate and maximize the system's capabilities.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 7. Demo -->
+        <div class="col-6 col-md-4 col-lg-2-4">
+          <div class="card service-card">
+            <img class="card-bg-img" src="{% static 'images/64675.jpg' %}" alt="Demo & Learning Support" />
+            <div class="card-gradient"></div>
+            <div class="card-arrow">
+              <svg viewBox="0 0 14 14" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 11L11 3M11 3H5M11 3v6"/>
+              </svg>
+            </div>
+            <div class="card-title-static">Demo & Learning Support</div>
+            <div class="card-desc-panel">
+              <p class="desc-title">Demo & Learning Support</p>
+              <p class="desc-text">Guided demos and resources to help clients explore and understand the system before and after go-live.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 8. Maintenance -->
+        <div class="col-6 col-md-4 col-lg-2-4">
+          <div class="card service-card">
+            <img class="card-bg-img" src="{% static 'images/60751.jpg' %}" alt="Maintenance & Support" />
+            <div class="card-gradient"></div>
+            <div class="card-arrow">
+              <svg viewBox="0 0 14 14" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 11L11 3M11 3H5M11 3v6"/>
+              </svg>
+            </div>
+            <div class="card-title-static">Maintenance & Support</div>
+            <div class="card-desc-panel">
+              <p class="desc-title">Maintenance & Support</p>
+              <p class="desc-text">Continuous post-implementation support to keep your ERP running smoothly and efficiently.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 9. AMC -->
+        <div class="col-6 col-md-4 col-lg-2-4">
+          <div class="card service-card">
+            <img class="card-bg-img" src="{% static 'images/209.jpg' %}" alt="Annual Maintenance Contract" />
+            <div class="card-gradient"></div>
+            <div class="card-arrow">
+              <svg viewBox="0 0 14 14" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 11L11 3M11 3H5M11 3v6"/>
+              </svg>
+            </div>
+            <div class="card-title-static">Annual Maintenance Contract</div>
+            <div class="card-desc-panel">
+              <p class="desc-title">Annual Maintenance Contract (AMC)</p>
+              <p class="desc-text">Long-term AMC services ensuring system reliability, timely updates, and uninterrupted operations.</p>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+
+    </div>
+  </div>
+
+
+
+  <div class="section-2">
+    <div class="container">
+
+      <div class="text-center"><div class="product-badge">Client Testimonials</div></div>
+      <div  class="mx-auto">
+        <h2 class="heading-1 mb-4">What Our Client Says.</h2>
+        <p class="sub-heading-1 text-center mb-4 d-none">
+              From sales to inventory, HR to finance - our comprehensive suite of products covers all aspects of your business operations.
+        </p>
+      </div>
+
+       <!-- Slider wrapper -->
+        <div class="testimonials-slider">
+          <div class="testimonials-track" id="testimonialsTrack">
+            {% for testimonial in testimonials %}
+            <div class="testimonial-slide">
+              <div class="card testimonial-card h-100">
+                <div class="card-body d-flex flex-column justify-content-between">
+                  <div>
+                    <div class="testimonial-stars">
+                      {# This creates the star icons based on the 'stars' field #}
+                      {% for i in "x"|rjust:testimonial.stars %}
+                      <img src="{% static 'icons/material-symbols_star.svg' %}" alt="★" width="20" height="20">
+                      {% endfor %}
+                    </div>
+                    <p class="testimonial-text">
+                      {{ testimonial.text }}
+                    </p>
+                  </div>
+                  <div class="testimonial-author">
+                    <p class="author-name">{{ testimonial.author_name }}</p>
+                    <p class="author-role">{{ testimonial.author_role }}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            {% empty %}
+            <p>No testimonials available at this time.</p>
+            {% endfor %}
+
+          </div>
+        </div>
+
+      <!-- Controls -->
+      <div class="testimonials-controls mt-4">
+        <button class="testimonial-btn" id="testimonialPrev">
+          <svg width="20" height="20" viewBox="0 0 16 16" fill="none">
+            <path d="M10 3L5 8L10 13" stroke="currentColor" stroke-width="1.5"
+              stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <div class="testimonial-dots" id="testimonialDots"></div>
+        <button class="testimonial-btn" id="testimonialNext">
+          <svg width="20" height="20" viewBox="0 0 16 16" fill="none">
+            <path d="M6 3L11 8L6 13" stroke="currentColor" stroke-width="1.5"
+              stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </div>
+
+
+    </div>
+  </div>
+
+  <div class="section-2">
+    <div class="container">
+
+      <div class="row row-cols-1 row-cols-md-2 g-5">
+        <div class="col-md-5">
+          <div class="product-badge">FAQ</div>
+          <h2 class="heading-1 text-start">Questions?</h2>
+          <h2 class="heading-1 text-start mb-4">We’ve Got Answers</h2>
+          <p class="sub-heading-1 text-start mb-2">
+              Can't find what you're looking for? Reach out to our team — we're happy to help.
+          </p>
+          <a href="#" class="btn odoo-cta">
+              Talk to an Expert
+              <img src="{% static 'icons/stash_arrow-up.svg' %}" alt="">
+            </a>
+        </div>
+        <div class="col-md-7">
+
+          <div class="accordion faq-accordion" id="faqAccordion">
+            {% for faq in faqs %}
+            <div class="accordion-item faq-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button faq-btn collapsed" type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#faq{{ forloop.counter }}"
+                  aria-expanded="false"
+                  aria-controls="faq{{ forloop.counter }}">
+                  {{ faq.question }}
+                  <img src="{% static 'icons/Frame124.svg' %}" alt="" class="faq-icon">
+                </button>
+              </h2>
+              <div id="faq{{ forloop.counter }}" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                <div class="accordion-body faq-body">
+                  {{ faq.answer }}
+                </div>
+              </div>
+            </div>
+            {% empty %}
+            <p class="text-center">No FAQs available at the moment.</p>
+            {% endfor %}
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="section-2">
+    <div class="container">
+
+      <div class="row align-items-center">
+
+        <!-- Left -->
+        <div class="col-md-6">
+          <div class="product-badge">Insights & Media</div>
+          <h2 class="heading-1 text-start">From Our Knowledge Base.</h2>
+        </div>
+
+        <!-- Right -->
+        <div class="col-md-6 text-end">
+          <a href="{% url 'code_app:blogs' %}" class="btn-hero-ghost">
+            View All Articles
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M3 8H13M13 8L8.5 3.5M13 8L8.5 12.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+        </div>
+
+      </div>
+
+      <div class="content-section-1">
+
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+          {% for post in posts %}
+          <div class="col">
+            <div class="card blog-card h-100">
+              <img src="{{ post.featured_image.url }}" class="blog-card-img" alt="{{ post.title }}">
+              <div class="card-body blog-card-body d-flex flex-column justify-content-between">
+                <div>
+                  <h5 class="blog-title">{{ post.title }}</h5>
+                  <p class="blog-excerpt">{{ post.excerpt }}</p>
+                </div>
+                <a href="{% url 'code_app:blog_detail' post.slug %}" class="blog-read-more">Read More</a>
+              </div>
+            </div>
+          </div>
+          {% empty %}
+            <p>No blogs posted yet.</p>
+          {% endfor %}
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+
+
+{% endblock %}

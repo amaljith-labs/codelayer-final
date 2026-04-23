@@ -1,0 +1,879 @@
+{% load static %}
+
+<div class="navbar-wrapper">
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="{% url 'code_app:home' %}">
+            <img src="{% static 'images/codelayer.png' %}" alt="logo" class="codelayer-logo">
+        </a>
+
+        <button class="btn btn-col-offcanvas d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMobile" aria-controls="offcanvasMobile">
+          <img src="{% static 'icons/material-symbols_menu-rounded.svg' %}" alt="menu">
+        </button>
+
+        <div class="collapse navbar-collapse d-none d-lg-flex">
+          <ul class="navbar-nav ms-auto me-auto gap-1">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="{% url 'code_app:home' %}">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'code_app:about' %}">About us</a>
+            </li>
+            <!-- Products — mega menu -->
+            <li class="nav-item dropdown mega-dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                Products
+              </a>
+              <div class="dropdown-menu mega-menu">
+                <div class="mega-menu-inner">
+                  <div class="card mega-menu-card w-100 p-0">
+                    <div class="card-body p-2">
+                      <div class="row row-cols-1 row-cols-md-2 g-4">
+                        <!-- ODOO col section starts here-->
+                        <div class="col-md-6 h-100">
+                          <div class="row row-cols-1 row-cols-lg-2 g-4">
+                            <div class="col">
+                              <h2 class="nav-drop-heading">We're Odoo Partner</h2>
+                              <p class="mega-menu-item-desc">
+                                We provide end-to-end services to ensure successful implementation, customization, and continuous support of Odoo.
+                              </p>
+                              <video autoplay muted loop playsinline poster="{% static 'images/video-placeholder.jpg' %}" class="w-100 d-block rounded-3" style="aspect-ratio: 16/9; object-fit: cover;">
+                                <source src="{% static 'videos/odoo_header.mp4' %}" type="video/mp4">
+                                Your browser does not support the video tag.
+                              </video>
+                            </div>
+                            <div class="col">
+                              <div class="card border-0">
+                                <div class="card-body p-3">
+                                  <a href="#" class="mega-menu-item horizontal-centered">
+                                    <div class="feature-icon">
+                                      <img src="{% static 'icons/fluent_clipboard-task-24-filled.svg' %}" alt="">
+                                    </div>
+                                    <div class="mega-menu-content">
+                                      <span class="mega-menu-item-title">Odoo Implementation</span>
+                                      <span class="mega-menu-item-desc mt-1 d-none">Launch your business into the digital era with a seamless, end-to-end Odoo setup configured for maximum efficiency. </span>
+                                    </div>
+                                  </a>
+                                  <a href="#" class="mega-menu-item horizontal-centered">
+                                    <div class="feature-icon">
+                                      <img src="{% static 'icons/ph_magic-wand-fill.svg' %}" alt="">
+                                    </div>
+                                    <div class="mega-menu-content">
+                                      <span class="mega-menu-item-title">Odoo Customization</span>
+                                      <span class="mega-menu-item-desc mt-1 d-none">Transform standard modules into bespoke tools that align perfectly with your unique business logic and workflows.</span>
+                                    </div>
+                                  </a>
+                                  <a href="#" class="mega-menu-item horizontal-centered">
+                                    <div class="feature-icon">
+                                      <img src="{% static 'icons/clarity_users-solid.svg' %}" alt="">
+                                    </div>
+                                    <div class="mega-menu-content">
+                                      <span class="mega-menu-item-title">Odoo Training</span>
+                                      <span class="mega-menu-item-desc mt-1 d-none">Empower your team with hands-on training sessions designed to master Odoo’s interface and boost daily productivity.</span>
+                                    </div>
+                                  </a>
+                                  <a href="#" class="mega-menu-item horizontal-centered">
+                                    <div class="feature-icon">
+                                      <img src="{% static 'icons/streamline-plump_customer-support-3-remix.svg' %}" alt="">
+                                    </div>
+                                    <div class="mega-menu-content">
+                                      <span class="mega-menu-item-title">Odoo Support</span>
+                                      <span class="mega-menu-item-desc mt-1 d-none">Ensure business continuity with dedicated technical assistance and regular system health checks to keep your ERP running smoothly.</span>
+                                    </div>
+                                  </a>
+                                </div>
+                                <div class="card-footer bg-transparent border-0 text-end">
+                                  <a href="https://www.odoo.com/" target="_blank" class="btn odoo-cta-header">
+                                    Learn More About Odoo
+                                    <img src="{% static 'icons/stash_arrow-up.svg' %}" alt="">
+                                  </a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- Growbiz col section-->
+                        <div class="col-md-6 border-start rounded-0">
+                          <div class="row row-cols-1 row-cols-md-2 g-4">
+                            <div class="col-md-4">
+                              <h2 class="nav-drop-heading">Growbiz ERP Ecosystem</h2>
+                              <p class="mega-menu-item-desc">
+                                A unified, all-in-one business management ecosystem designed to eliminate silos. GrowBiz
+                                integrates every department into a single source of truth, allowing your business to scale
+                                with operational excellence and real-time data insights.
+                              </p>
+                              <img src="{% static 'icons/growbiz.svg' %}" class="img-thumbnail grow-img border-0 bg-transparent" alt="...">
+                            </div>
+                            <div class="col-12 col-xl-8">
+                              <div class="mega-menu-vscroll-wrap">
+                                <div class="mega-menu-vscroll">
+                                  <div class="card border-0">
+                                    <div class="card-body p-3">
+                                      <a href="{% url 'code_app:quarry_crusher' %}" class="mega-menu-item horizontal-centered">
+                                        <div class="feature-icon">
+                                          <i class="bi bi-gear-wide-connected"></i>
+                                        </div>
+                                        <div class="mega-menu-content">
+                                          <span class="mega-menu-item-title">Quarry & Crusher ERP</span>
+                                        </div>
+                                      </a>
+                                      <a href="{% url 'code_app:ready_mix_erp' %}" class="mega-menu-item horizontal-centered">
+                                        <div class="feature-icon">
+                                          <i class="bi bi-moisture"></i>
+                                        </div>
+                                        <div class="mega-menu-content">
+                                          <span class="mega-menu-item-title">Ready-Mix Concrete ERP</span>
+                                        </div>
+                                      </a>
+                                      <a href="{% url 'code_app:brick_erp' %}" class="mega-menu-item horizontal-centered">
+                                        <div class="feature-icon">
+                                          <i class="bi bi-grid-3x3-gap-fill"></i>
+                                        </div>
+                                        <div class="mega-menu-content">
+                                          <span class="mega-menu-item-title">Brick Manufacturing ERP</span>
+                                        </div>
+                                      </a>
+                                      <a href="#" class="mega-menu-item horizontal-centered">
+                                        <div class="feature-icon">
+                                          <i class="bi bi-gem"></i>
+                                        </div>
+                                        <div class="mega-menu-content">
+                                          <span class="mega-menu-item-title">Mining</span>
+                                        </div>
+                                      </a>
+                                      <a href="#" class="mega-menu-item horizontal-centered">
+                                        <div class="feature-icon">
+                                          <i class="bi bi-briefcase-fill"></i>
+                                        </div>
+                                        <div class="mega-menu-content">
+                                          <span class="mega-menu-item-title">MSME ERP</span>
+                                        </div>
+                                      </a>
+                                      <a href="#" class="mega-menu-item horizontal-centered">
+                                        <div class="feature-icon">
+                                          <i class="bi bi-flower1"></i>
+                                        </div>
+                                        <div class="mega-menu-content">
+                                          <span class="mega-menu-item-title">Agriculture ERP</span>
+                                        </div>
+                                      </a>
+                                      <a href="#" class="mega-menu-item horizontal-centered">
+                                        <div class="feature-icon">
+                                          <i class="bi bi-gear-fill"></i>
+                                        </div>
+                                        <div class="mega-menu-content">
+                                          <span class="mega-menu-item-title">Manufacturing</span>
+                                        </div>
+                                      </a>
+                                      <a href="#" class="mega-menu-item horizontal-centered">
+                                        <div class="feature-icon">
+                                          <i class="bi bi-truck"></i>
+                                        </div>
+                                        <div class="mega-menu-content">
+                                          <span class="mega-menu-item-title">Logistics & Warehousing</span>
+                                        </div>
+                                      </a>
+                                      <a href="#" class="mega-menu-item horizontal-centered">
+                                        <div class="feature-icon">
+                                          <i class="bi bi-speedometer2"></i>
+                                        </div>
+                                        <div class="mega-menu-content">
+                                          <span class="mega-menu-item-title">Fleet Management and Maintenance</span>
+                                        </div>
+                                      </a>
+                                      <a href="#" class="mega-menu-item horizontal-centered">
+                                        <div class="feature-icon">
+                                          <i class="bi bi-lightning-charge-fill"></i>
+                                        </div>
+                                        <div class="mega-menu-content">
+                                          <span class="mega-menu-item-title">Energy & Utilities</span>
+                                        </div>
+                                      </a>
+                                      <a href="#" class="mega-menu-item horizontal-centered">
+                                        <div class="feature-icon">
+                                          <i class="bi bi-cart4"></i>
+                                        </div>
+                                        <div class="mega-menu-content">
+                                          <span class="mega-menu-item-title">Retail & E-commerce</span>
+                                        </div>
+                                      </a>
+                                      <a href="#" class="mega-menu-item horizontal-centered">
+                                        <div class="feature-icon">
+                                          <i class="bi bi-building-fill-gear"></i>
+                                        </div>
+                                        <div class="mega-menu-content">
+                                          <span class="mega-menu-item-title">Construction</span>
+                                        </div>
+                                      </a>
+                                      <a href="#" class="mega-menu-item horizontal-centered">
+                                        <div class="feature-icon">
+                                          <i class="bi bi-scissors"></i>
+                                        </div>
+                                        <div class="mega-menu-content">
+                                          <span class="mega-menu-item-title">Textile & Processing</span>
+                                        </div>
+                                      </a>
+                                      <a href="#" class="mega-menu-item horizontal-centered">
+                                        <div class="feature-icon">
+                                          <i class="bi bi-heart-pulse-fill"></i>
+                                        </div>
+                                        <div class="mega-menu-content">
+                                          <span class="mega-menu-item-title">Healthcare</span>
+                                        </div>
+                                      </a>
+                                      <a href="#" class="mega-menu-item horizontal-centered">
+                                        <div class="feature-icon">
+                                          <i class="bi bi-mortarboard-fill"></i>
+                                        </div>
+                                        <div class="mega-menu-content">
+                                          <span class="mega-menu-item-title">Education</span>
+                                        </div>
+                                      </a>
+                                      <a href="#" class="mega-menu-item horizontal-centered">
+                                        <div class="feature-icon">
+                                          <i class="bi bi-airplane-engines-fill"></i>
+                                        </div>
+                                        <div class="mega-menu-content">
+                                          <span class="mega-menu-item-title">Travel & Tourism</span>
+                                        </div>
+                                      </a>
+                                      <a href="#" class="mega-menu-item horizontal-centered">
+                                        <div class="feature-icon">
+                                          <i class="bi bi-pc-display-horizontal"></i>
+                                        </div>
+                                        <div class="mega-menu-content">
+                                          <span class="mega-menu-item-title">Corporate / IT Services</span>
+                                        </div>
+                                      </a>
+                                    </div>
+                                  </div>
+                                </div>
+
+                                <div class="col">
+                                  <div class="card border-0 rounded-0">
+                                    <div class="card-body p-3">
+                                      <a href="#" class="mega-menu-item horizontal-centered">
+                                        <div class="feature-icon">
+                                          <i class="bi bi-lightning-charge-fill"></i>
+                                        </div>
+                                        <div class="mega-menu-content">
+                                          <span class="mega-menu-item-title">Energy & Utilities</span>
+                                        </div>
+                                      </a>
+                                      <a href="#" class="mega-menu-item horizontal-centered">
+                                        <div class="feature-icon">
+                                          <i class="bi bi-cart4"></i>
+                                        </div>
+                                        <div class="mega-menu-content">
+                                          <span class="mega-menu-item-title">Retail & E-commerce</span>
+                                        </div>
+                                      </a>
+                                      <a href="#" class="mega-menu-item horizontal-centered">
+                                        <div class="feature-icon">
+                                          <i class="bi bi-building-fill-gear"></i>
+                                        </div>
+                                        <div class="mega-menu-content">
+                                          <span class="mega-menu-item-title">Construction</span>
+                                        </div>
+                                      </a>
+                                      <a href="#" class="mega-menu-item horizontal-centered">
+                                        <div class="feature-icon">
+                                          <i class="bi bi-scissors"></i>
+                                        </div>
+                                        <div class="mega-menu-content">
+                                          <span class="mega-menu-item-title">Textile & Processing</span>
+                                        </div>
+                                      </a>
+                                      <a href="#" class="mega-menu-item horizontal-centered">
+                                        <div class="feature-icon">
+                                          <i class="bi bi-heart-pulse-fill"></i>
+                                        </div>
+                                        <div class="mega-menu-content">
+                                          <span class="mega-menu-item-title">Healthcare</span>
+                                        </div>
+                                      </a>
+                                      <a href="#" class="mega-menu-item horizontal-centered">
+                                        <div class="feature-icon">
+                                          <i class="bi bi-mortarboard-fill"></i>
+                                        </div>
+                                        <div class="mega-menu-content">
+                                          <span class="mega-menu-item-title">Education</span>
+                                        </div>
+                                      </a>
+                                      <a href="#" class="mega-menu-item horizontal-centered">
+                                        <div class="feature-icon">
+                                          <i class="bi bi-airplane-engines-fill"></i>
+                                        </div>
+                                        <div class="mega-menu-content">
+                                          <span class="mega-menu-item-title">Travel & Tourism</span>
+                                        </div>
+                                      </a>
+                                      <a href="#" class="mega-menu-item horizontal-centered">
+                                        <div class="feature-icon">
+                                          <i class="bi bi-pc-display-horizontal"></i>
+                                        </div>
+                                        <div class="mega-menu-content">
+                                          <span class="mega-menu-item-title">Corporate / IT Services</span>
+                                        </div>
+                                      </a>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="card-footer p-0 bg-transparent border-0 text-end mt-4">
+                                <a href="#" class="btn odoo-cta-header">
+                                  View all Products
+                                  <img src="{% static 'icons/stash_arrow-up.svg' %}" alt="">
+                                </a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <!-- Services — mega menu -->
+            <li class="nav-item dropdown mega-dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                Services
+              </a>
+              <div class="dropdown-menu mega-menu">
+                <div class="mega-menu-inner">
+
+                  <!-- Left: Image -->
+                  <div class="mega-menu-image mega-menu-subsec-2 p-2">
+                    <h2 class="nav-drop-heading">Our Services</h2>
+                    <p class="mega-menu-item-desc">
+                      We provide end-to-end services to ensure successful implementation, customization, and continuous support of GrowBiz ERP.
+                    </p>
+                    <dotlottie-wc src="{% static 'animations/performance.lottie' %}" style="width: 300px;height: 150px" autoplay loop></dotlottie-wc>
+                  </div>
+
+                  <!-- Right: Links -->
+                  <div class="mega-menu-links">
+                    <div class="mega-menu-columns">
+                      <!-- Column 1 -->
+                        <div class="mega-menu-col">
+                          <a href="{% url 'code_app:services' %}" class="mega-menu-item horizontal-centered">
+                            <div class="feature-icon">
+                              <img src="{% static 'icons/fa7-solid_gear.svg' %}" alt="">
+                            </div>
+                            <div class="mega-menu-content">
+                              <span class="mega-menu-item-title">ERP Implementation</span>
+                              <span class="mega-menu-item-desc mt-1">Tailored end-to-end deployment to match your specific business requirements. </span>
+                            </div>
+                          </a>
+                          <a href="{% url 'code_app:services' %}" class="mega-menu-item horizontal-centered">
+                            <div class="feature-icon">
+                              <img src="{% static 'icons/ion_bar-chart.svg' %}" alt="">
+                            </div>
+                            <div class="mega-menu-content">
+                              <span class="mega-menu-item-title">Business Analysis & Consultation</span>
+                              <span class="mega-menu-item-desc mt-1">Expert evaluation of your workflows to identify and implement the ideal ERP strategy.</span>
+                            </div>
+                          </a>
+                          <a href="{% url 'code_app:services' %}" class="mega-menu-item horizontal-centered">
+                            <div class="feature-icon">
+                              <img src="{% static 'icons/fluent_code-24-filled.svg' %}" alt="">
+                            </div>
+                            <div class="mega-menu-content">
+                              <span class="mega-menu-item-title">Customization & Development</span>
+                              <span class="mega-menu-item-desc mt-1">Bespoke feature development designed to align perfectly with your unique operations.</span>
+                            </div>
+                          </a>
+                        </div>
+
+                        <!-- Divider -->
+                        <div class="mega-menu-divider"></div>
+
+                        <!-- Column 2 -->
+                        <div class="mega-menu-col">
+                          <a href="{% url 'code_app:services' %}" class="mega-menu-item horizontal-centered">
+                            <div class="feature-icon">
+                              <img src="{% static 'icons/mdi_puzzle.svg' %}" alt="">
+                            </div>
+                            <div class="mega-menu-content">
+                              <span class="mega-menu-item-title">Integration Services</span>
+                              <span class="mega-menu-item-desc mt-1">Connect GrowBiz ERP with your existing hardware and third-party software for seamless data flow.</span>
+                            </div>
+                          </a>
+                          <a href="{% url 'code_app:services' %}" class="mega-menu-item horizontal-centered">
+                            <div class="feature-icon">
+                              <img src="{% static 'icons/streamline_cloud-data-transfer-solid.svg' %}" alt="">
+                            </div>
+                            <div class="mega-menu-content">
+                              <span class="mega-menu-item-title">Data Migration</span>
+                              <span class="mega-menu-item-desc mt-1">Secure and precise transfer of critical data from legacy systems to your new platform.</span>
+                            </div>
+                          </a>
+                          <a href="{% url 'code_app:services' %}" class="mega-menu-item horizontal-centered">
+                            <div class="feature-icon">
+                              <img src="{% static 'icons/mdi_users.svg' %}" alt="">
+                            </div>
+                            <div class="mega-menu-content">
+                              <span class="mega-menu-item-title">Training & User Onboarding</span>
+                              <span class="mega-menu-item-desc mt-1">Comprehensive training sessions to ensure your team masters the system with confidence.</span>
+                            </div>
+                          </a>
+                        </div>
+
+                        <!-- Divider -->
+                        <div class="mega-menu-divider"></div>
+
+                        <!-- Column 2 -->
+                        <div class="mega-menu-col">
+                          <a href="{% url 'code_app:services' %}" class="mega-menu-item horizontal-centered">
+                            <div class="feature-icon">
+                              <img src="{% static 'icons/ph_monitor-play-fill.svg' %}" alt="">
+                            </div>
+                            <div class="mega-menu-content">
+                              <span class="mega-menu-item-title">Demo & Learning Support</span>
+                              <span class="mega-menu-item-desc mt-1">Interactive resources and guided tours to help you explore the system’s full potential.</span>
+                            </div>
+                          </a>
+                          <a href="{% url 'code_app:services' %}" class="mega-menu-item horizontal-centered">
+                            <div class="feature-icon">
+                              <img src="{% static 'icons/fluent_headset-16-filled.svg' %}" alt="">
+                            </div>
+                            <div class="mega-menu-content">
+                              <span class="mega-menu-item-title">Maintenance & Support</span>
+                              <span class="mega-menu-item-desc mt-1">Ongoing technical assistance to keep your system running at peak performance.</span>
+                            </div>
+                          </a>
+                          <a href="{% url 'code_app:services' %}" class="mega-menu-item horizontal-centered">
+                            <div class="feature-icon">
+                              <img src="{% static 'icons/mdi_shield-check.svg' %}" alt="">
+                            </div>
+                            <div class="mega-menu-content">
+                              <span class="mega-menu-item-title">Annual Maintenance Contract (AMC)</span>
+                              <span class="mega-menu-item-desc mt-1">Long-term partnership plans for uninterrupted reliability and priority support.</span>
+                            </div>
+                          </a>
+                        </div>
+
+                    </div>
+
+                  </div>
+
+                </div>
+              </div>
+            </li>
+
+            <!-- Media — mega menu -->
+            <li class="nav-item dropdown mega-dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                Media
+              </a>
+              <div class="dropdown-menu mega-menu">
+                <div class="mega-menu-inner">
+
+                  <!-- Left: Image -->
+                  <div class="mega-menu-image">
+                    <h2 class="nav-drop-heading">Stories that Inspire Businesses</h2>
+                    <p class="mega-menu-item-desc">
+                      Explore real client success stories, industry insights, and behind-the-scenes moments from 600+ enterprise implementations.
+                    </p>
+                    <dotlottie-wc src="{% static 'animations/Conversation.lottie' %}" style="width: 300px;height: 150px" autoplay loop></dotlottie-wc>
+                  </div>
+
+                  <!-- Right: Links -->
+                  <div class="mega-menu-links">
+                    <div class="mega-menu-columns">
+                      <!-- Column 1 -->
+                        <div class="mega-menu-col">
+                          <p class="mega-menu-heading">Blogs & Resources</p>
+                          <a href="{% url 'code_app:blogs' %}" class="mega-menu-item horizontal-centered">
+                            <div class="feature-icon">
+                              <img src="{% static 'icons/icons8-newspaper.svg' %}" alt="">
+                            </div>
+                            <div class="mega-menu-content">
+                              <span class="mega-menu-item-title">Our Blogs</span>
+                              <span class="mega-menu-item-desc mt-1">Insights, news, and expert tips on ERP implementation.</span>
+                            </div>
+                          </a>
+                          <a href="{% url 'code_app:resources' %}" class="mega-menu-item horizontal-centered d-none">
+                            <div class="feature-icon">
+                              <img src="{% static 'icons/icons8-download-64 1.svg' %}" alt="">
+                            </div>
+                            <div class="mega-menu-content">
+                              <span class="mega-menu-item-title">Resources</span>
+                              <span class="mega-menu-item-desc mt-1">Whitepapers, e-books, and guides to help you scale.</span>
+                            </div>
+                          </a>
+                        </div>
+                       <!-- Divider -->
+                        <div class="mega-menu-divider"></div>
+
+                      <!-- Column 2 -->
+                      <div class="mega-menu-col">
+                        <p class="mega-menu-heading">Events</p>
+                        <a href="{% url 'code_app:events' %}" class="mega-menu-item horizontal-centered">
+                            <div class="feature-icon">
+                              <img src="{% static 'icons/icons8-calendar-50.svg' %}" alt="">
+                            </div>
+                            <div class="mega-menu-content">
+                              <span class="mega-menu-item-title">Events</span>
+                              <span class="mega-menu-item-desc mt-1">Join our upcoming webinars, workshops, and seminars.</span>
+                            </div>
+                          </a>
+                        <a href="{% url 'code_app:siteVisits' %}" class="mega-menu-item horizontal-centered">
+                            <div class="feature-icon">
+                              <img src="{% static 'icons/icons8-factory-50.svg' %}" alt="">
+                            </div>
+                            <div class="mega-menu-content">
+                              <span class="mega-menu-item-title">Site Visits</span>
+                              <span class="mega-menu-item-desc mt-1">Experience our ERP solutions live at active client locations.</span>
+                            </div>
+                          </a>
+                      </div>
+
+                      <!-- Divider -->
+                      <div class="mega-menu-divider"></div>
+
+                      <!-- Column 3 -->
+                      <div class="mega-menu-col">
+                        <p class="mega-menu-heading">Testimonials</p>
+                        <a href="{% url 'code_app:customerStories' %}" class="mega-menu-item horizontal-centered">
+                            <div class="feature-icon">
+                              <img src="{% static 'icons/icons8-quote-50.svg' %}" alt="">
+                            </div>
+                            <div class="mega-menu-content">
+                              <span class="mega-menu-item-title">Customer Stories</span>
+                              <span class="mega-menu-item-desc mt-1">Real-world success stories from businesses like yours.</span>
+                            </div>
+                          </a>
+                        <a href="{% url 'code_app:customerStories' %}#videoTestimonials" class="mega-menu-item horizontal-centered">
+                            <div class="feature-icon">
+                              <img src="{% static 'icons/icons8-video-50.svg' %}" alt="">
+                            </div>
+                            <div class="mega-menu-content">
+                              <span class="mega-menu-item-title">Video Testimonials</span>
+                              <span class="mega-menu-item-desc mt-1">Watch our clients discuss their digital transformation journey.</span>
+                            </div>
+                          </a>
+
+                      </div>
+
+                    </div>
+
+                  </div>
+
+                </div>
+              </div>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'code_app:career' %}">Career</a>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'code_app:contact' %}">Contact us</a>
+            </li>
+<!--            <li class="nav-item dropdown">-->
+<!--              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">-->
+<!--                Contact us-->
+<!--              </a>-->
+<!--              <ul class="dropdown-menu">-->
+<!--                <li><a class="dropdown-item" href="#">Action</a></li>-->
+<!--                <li><a class="dropdown-item" href="#">Another action</a></li>-->
+<!--                <li><a class="dropdown-item" href="#">Something else here</a></li>-->
+<!--              </ul>-->
+<!--            </li>-->
+          </ul>
+        </div>
+
+        <div class="nav-btn-grp gap-2 d-none d-lg-flex">
+            <a href="{% url 'code_app:contact' %}" class="btn-cta-primary">
+              Request a Demo <i class="bi bi-arrow-right"></i>
+            </a>
+            <button class="btn btn-col-offcanvas" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+              <img src="{% static 'icons/material-symbols_menu-rounded.svg' %}" alt="">
+            </button>
+        </div>
+
+      </div>
+    </nav>
+</div>
+
+<!--OFFCANVAS IN PC VIEW-->
+<div class="offcanvas offcanvas-pc-view offcanvas-end" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasExampleLabel">
+      <a class="navbar-brand" href="/">
+            <img src="{% static 'images/codelayer.png' %}" alt="logo" class="codelayer-logo">
+        </a>
+    </h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    <!-- Description -->
+    <p class="offcanvas-desc">
+      Codelayer Technologies enables organisations to scale with clarity and control
+      by integrating people, process, and technology into a unified enterprise ecosystem.
+    </p>
+
+    <hr class="offcanvas-divider">
+
+    <!-- Info cards -->
+      <div class="info-card">
+        <div class="ic-icon"><i class="bi bi-telephone-fill"></i></div>
+        <div>
+          <div class="ic-label">Phone</div>
+          <div class="ic-value">
+            <a href="tel:+918943340336">+91 89433 40336</a><br>
+            <a href="tel:+918129562211">+91 81295 62211</a><br>
+            <a href="tel:+918139854853">+91 81398 54853</a>
+          </div>
+        </div>
+      </div>
+
+        <div class="info-card">
+          <div class="ic-icon"><i class="bi bi-envelope-fill"></i></div>
+          <div>
+            <div class="ic-label">Email</div>
+            <div class="ic-value"><a href="mailto:sales@codelayer.in">sales@codelayer.in</a></div>
+          </div>
+        </div>
+
+        <div class="info-card">
+          <div class="ic-icon"><i class="bi bi-geo-alt-fill"></i></div>
+          <div>
+            <div class="ic-label">Office</div>
+            <div class="ic-value">Kinfra Film And Video Park, 33,<br>Kazhakkoottam,<br>Thiruvananthapuram, Kerala 695585</div>
+          </div>
+        </div>
+
+        <!-- Social + Trust -->
+          <hr style="border-color:rgba(30,200,160,.12);margin:1.5rem 0 1.2rem;">
+
+          <p style="font-size:.76rem;color:#6b8580;letter-spacing:.08em;text-transform:uppercase;margin-bottom:.9rem;">Follow Us</p>
+          <div class="social-wrap">
+            <a href="https://in.linkedin.com/company/codelayertechnologies" target="_blank" class="soc-btn" title="LinkedIn"><i class="bi bi-linkedin"></i></a>
+            <a href="https://www.facebook.com/codelayertech" target="_blank" class="soc-btn" title="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="https://www.instagram.com/codelayer_" target="_blank" class="soc-btn" title="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="#" target="_blank" class="soc-btn" title="YouTube"><i class="bi bi-youtube"></i></a>
+            <a href="#" target="_blank" class="soc-btn" title="X / Twitter"><i class="bi bi-twitter-x"></i></a>
+          </div>
+
+          <div class="trust-strip">
+            <span class="trust-badge"><i class="bi bi-patch-check-fill"></i> Odoo Channel Partner</span>
+            <span class="trust-badge"><i class="bi bi-building-check"></i> 600+ Clients</span>
+            <span class="trust-badge"><i class="bi bi-award-fill"></i> 25+ Years</span>
+          </div>
+
+
+  </div>
+</div>
+
+
+
+<!-- Mobile Offcanvas -->
+<div class="offcanvas offcanvas-end d-lg-none" tabindex="-1" id="offcanvasMobile"
+  aria-labelledby="offcanvasMobileLabel">
+  <div class="offcanvas-header">
+    <a href="{% url 'code_app:home' %}" class="offcanvas-title">
+      <img src="{% static 'images/codelayer.png' %}" alt="logo" style="height: 36px;">
+    </a>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    <ul class="navbar-nav flex-column gap-1">
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'code_app:home' %}">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'code_app:about' %}">About us</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link d-flex justify-content-between align-items-center"
+          data-bs-toggle="collapse" href="#mobileProducts" role="button">
+          Products <span>›</span>
+        </a>
+        <div class="collapse p-3" id="mobileProducts" style="background: rgba(30, 200, 160, .10); border-radius: 0.5rem; padding: 0.2rem;">
+
+          <div class="mt-2 mb-1 text-muted small text-uppercase fw-bold">We're Odoo Partners</div>
+          <a class="nav-link py-1" href="https://www.odoo.com/" target="_blank">Odoo Implementation</a>
+          <a class="nav-link py-1" href="https://www.odoo.com/" target="_blank">Odoo Customization</a>
+          <a class="nav-link py-1" href="https://www.odoo.com/" target="_blank">Odoo Training</a>
+          <a class="nav-link py-1" href="https://www.odoo.com/" target="_blank">Odoo Support</a>
+
+          <a class="nav-link py-2 fw-bold text-primary" href="https://www.odoo.com/" target="_blank">Learn More About Odoo →</a>
+
+          <hr class="my-2 text-secondary opacity-25">
+
+          <div class="mt-2 mb-1 text-muted small text-uppercase fw-bold">Growbiz ERP Ecosystem</div>
+          <a class="nav-link py-1" href="{% url 'code_app:quarry_crusher' %}">Quarry & Crusher ERP</a>
+          <a class="nav-link py-1" href="{% url 'code_app:ready_mix_erp' %}">Ready-Mix Concrete ERP</a>
+          <a class="nav-link py-1" href="{% url 'code_app:brick_erp' %}">Brick Manufacturing ERP</a>
+          <a class="nav-link py-1" href="#">Mining</a>
+          <a class="nav-link py-1" href="#">MSME ERP</a>
+          <a class="nav-link py-1" href="#">Agriculture ERP</a>
+          <a class="nav-link py-1" href="#">Manufacturing</a>
+          <a class="nav-link py-1" href="#">Logistics & Warehousing</a>
+          <a class="nav-link py-1" href="#">Fleet Management</a>
+          <a class="nav-link py-1" href="#">Energy & Utilities</a>
+          <a class="nav-link py-1" href="#">Retail & E-commerce</a>
+          <a class="nav-link py-1" href="#">Construction</a>
+          <a class="nav-link py-1" href="#">Textile & Processing</a>
+          <a class="nav-link py-1" href="#">Healthcare</a>
+          <a class="nav-link py-1" href="#">Education</a>
+          <a class="nav-link py-1" href="#">Travel & Tourism</a>
+          <a class="nav-link py-1" href="#">Corporate / IT Services</a>
+
+          <a class="nav-link py-2 fw-bold text-primary" href="#">View all Products →</a>
+
+        </div>
+      </li>
+      <!-- Mobile accordion dropdowns -->
+      <li class="nav-item">
+        <a class="nav-link d-flex justify-content-between align-items-center"
+          data-bs-toggle="collapse" href="#mobileServices" role="button">
+          Services <span>›</span>
+        </a>
+        <div class="collapse p-3" id="mobileServices" style="background: rgba(30, 200, 160, .10); border-radius: 0.5rem; padding: 0.2rem;">
+
+          <a class="nav-link py-1" href="{% url 'code_app:services' %}">ERP Implementation</a>
+          <a class="nav-link py-1" href="{% url 'code_app:services' %}">Business Analysis & Consultation</a>
+          <a class="nav-link py-1" href="{% url 'code_app:services' %}">Customization & Development</a>
+          <a class="nav-link py-1" href="{% url 'code_app:services' %}">Integration Services</a>
+          <a class="nav-link py-1" href="{% url 'code_app:services' %}">Data Migration</a>
+          <a class="nav-link py-1" href="{% url 'code_app:services' %}">Training & User Onboarding</a>
+          <a class="nav-link py-1" href="{% url 'code_app:services' %}">Demo & Learning Support</a>
+          <a class="nav-link py-1" href="{% url 'code_app:services' %}">Maintenance Support</a>
+          <a class="nav-link py-1" href="{% url 'code_app:services' %}">Annual Maintenance Contract (AMC)</a>
+
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link d-flex justify-content-between align-items-center"
+          data-bs-toggle="collapse" href="#mobileMedia" role="button">
+          Media <span>›</span>
+        </a>
+        <div class="collapse p-3" id="mobileMedia" style="background: rgba(30, 200, 160, .10); border-radius: 0.5rem; padding: 0.2rem;">
+
+          <div class="mt-2 mb-1 text-muted small text-uppercase fw-bold">Blogs & Resources</div>
+          <a class="nav-link py-1" href="{% url 'code_app:blogs' %}">Blogs</a>
+          <a class="nav-link py-1 d-none" href="{% url 'code_app:resources' %}">Resources</a>
+
+          <hr class="my-2 text-secondary opacity-25">
+
+          <div class="mt-2 mb-1 text-muted small text-uppercase fw-bold">Events</div>
+          <a class="nav-link py-1" href="{% url 'code_app:events' %}">Events</a>
+          <a class="nav-link py-1" href="{% url 'code_app:siteVisits' %}">Site Visits</a>
+
+          <hr class="my-2 text-secondary opacity-25">
+
+
+          <div class="mt-2 mb-1 text-muted small text-uppercase fw-bold">Testimonials</div>
+          <a class="nav-link py-1" href="{% url 'code_app:customerStories' %}">Customer Stories</a>
+          <a class="nav-link py-1" href="{% url 'code_app:customerStories' %}#videoTestimonials">Video Testimonials</a>
+
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'code_app:contact' %}">Contact us</a>
+      </li>
+    </ul>
+    <div class="mt-4">
+      <a href="{% url 'code_app:contact' %}" class="btn-cta-primary">Request a demo</a>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+<!--<div class="mega-menu-inner">-->
+
+<!--  &lt;!&ndash; Left: Image &ndash;&gt;-->
+<!--  <div class="mega-menu-image">-->
+<!--    <img src="{% static 'images/image 6.png' %}" alt="Products">-->
+<!--    <p class="mega-menu-img-caption">Explore our products</p>-->
+<!--  </div>-->
+
+<!--  &lt;!&ndash; Right: Links &ndash;&gt;-->
+<!--  <div class="mega-menu-links">-->
+<!--    <div class="mega-menu-columns">-->
+<!--      &lt;!&ndash; Column 1 &ndash;&gt;-->
+<!--        <div class="mega-menu-col">-->
+<!--          <p class="mega-menu-heading">ODOO</p>-->
+<!--          <a href="#" class="mega-menu-item">-->
+<!--            <span class="mega-menu-item-title">Odoo Implementation</span>-->
+<!--            <span class="mega-menu-item-desc">Core modules and capabilities</span>-->
+<!--          </a>-->
+<!--          <a href="#" class="mega-menu-item">-->
+<!--            <span class="mega-menu-item-title">Training</span>-->
+<!--            <span class="mega-menu-item-desc">Onboarding and user training</span>-->
+<!--          </a>-->
+<!--          <a href="#" class="mega-menu-item">-->
+<!--            <span class="mega-menu-item-title">Integration</span>-->
+<!--            <span class="mega-menu-item-desc">Third-party connections</span>-->
+<!--          </a>-->
+<!--          <a href="#" class="mega-menu-item">-->
+<!--            <span class="mega-menu-item-title">Support</span>-->
+<!--            <span class="mega-menu-item-desc">Ongoing assistance</span>-->
+<!--          </a>-->
+<!--        </div>-->
+<!--       &lt;!&ndash; Divider &ndash;&gt;-->
+<!--        <div class="mega-menu-divider"></div>-->
+
+<!--      &lt;!&ndash; Column 2 &ndash;&gt;-->
+<!--      <div class="mega-menu-col">-->
+<!--        <p class="mega-menu-heading">Ready-Mix Concrete ERP</p>-->
+<!--        <a href="#" class="mega-menu-item">-->
+<!--          <span class="mega-menu-item-title">Product Features</span>-->
+<!--          <span class="mega-menu-item-desc">Core modules and capabilities</span>-->
+<!--        </a>-->
+<!--        <a href="#" class="mega-menu-item">-->
+<!--          <span class="mega-menu-item-title">Training</span>-->
+<!--          <span class="mega-menu-item-desc">Onboarding and user training</span>-->
+<!--        </a>-->
+<!--        <a href="#" class="mega-menu-item">-->
+<!--          <span class="mega-menu-item-title">Integration</span>-->
+<!--          <span class="mega-menu-item-desc">Third-party connections</span>-->
+<!--        </a>-->
+<!--        <a href="#" class="mega-menu-item">-->
+<!--          <span class="mega-menu-item-title">Support</span>-->
+<!--          <span class="mega-menu-item-desc">Ongoing assistance</span>-->
+<!--        </a>-->
+<!--      </div>-->
+
+<!--      &lt;!&ndash; Divider &ndash;&gt;-->
+<!--      <div class="mega-menu-divider"></div>-->
+
+<!--      &lt;!&ndash; Column 3 &ndash;&gt;-->
+<!--      <div class="mega-menu-col">-->
+<!--        <p class="mega-menu-heading">General ERP</p>-->
+<!--        <a href="#" class="mega-menu-item">-->
+<!--          <span class="mega-menu-item-title">Product Features</span>-->
+<!--          <span class="mega-menu-item-desc">Core modules and capabilities</span>-->
+<!--        </a>-->
+<!--        <a href="#" class="mega-menu-item">-->
+<!--          <span class="mega-menu-item-title">Training</span>-->
+<!--          <span class="mega-menu-item-desc">Onboarding and user training</span>-->
+<!--        </a>-->
+<!--        <a href="#" class="mega-menu-item">-->
+<!--          <span class="mega-menu-item-title">Integration</span>-->
+<!--          <span class="mega-menu-item-desc">Third-party connections</span>-->
+<!--        </a>-->
+<!--        <a href="#" class="mega-menu-item">-->
+<!--          <span class="mega-menu-item-title">Support</span>-->
+<!--          <span class="mega-menu-item-desc">Ongoing assistance</span>-->
+<!--        </a>-->
+<!--      </div>-->
+
+<!--    </div>-->
+
+<!--  </div>-->
+
+<!--</div>-->

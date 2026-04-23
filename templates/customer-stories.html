@@ -1,0 +1,170 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Testimonials — Codelayer Technologies{% endblock %}
+
+{% block content %}
+
+    <section class="about-header" style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('{% static 'images/2148908967.webp' %}') no-repeat top center / cover;">
+        <div class="container h-100 d-flex align-items-center justify-content-center">
+            <div class="about-content text-center text-white">
+                <div class="product-badge">Testimonials</div>
+                <h1 class="mt-3 mb-3">Build the Future of Enterprise Tech.</h1>
+                <p class="lead mx-auto" style="max-width: 700px;">
+                    Join a team of passionate engineers, consultants, and innovators who are reshaping how industries operate —
+                    from the quarry floor to the boardroom.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="stats-banner">
+      <div class="container">
+        <div class="row g-4 text-center reveal visible">
+          <div class="col-6 col-md-3">
+            <div class="stat-item">
+              <div class="stat-num">600+</div>
+              <div class="stat-lbl">Enterprise clients worldwide</div>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="stat-item">
+              <div class="stat-num">40%</div>
+              <div class="stat-lbl">Avg. efficiency improvement</div>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="stat-item">
+              <div class="stat-num">15+</div>
+              <div class="stat-lbl">Industries served</div>
+            </div>
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="stat-item">
+              <div class="stat-num">4.9★</div>
+              <div class="stat-lbl">Average client satisfaction</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="" style="padding: 5.5rem 0;">
+
+        <div class="container">
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+                {% for testimonial in testimonials %}
+                <div class="col">
+                    <div class="card testimonial-card h-100">
+                        <div class="card-body d-flex flex-column justify-content-between">
+                            <div>
+                                <div class="testimonial-stars">
+                                    {% comment %}
+                                       Simple loop logic: if you want dynamic stars based on the 'stars' field,
+                                       you'd usually use a custom template filter.
+                                       For now, we'll render 5 stars as per your design.
+                                    {% endcomment %}
+                                    <img src="{% static 'icons/material-symbols_star.svg' %}" alt="★" width="20" height="20">
+                                    <img src="{% static 'icons/material-symbols_star.svg' %}" alt="★" width="20" height="20">
+                                    <img src="{% static 'icons/material-symbols_star.svg' %}" alt="★" width="20" height="20">
+                                    <img src="{% static 'icons/material-symbols_star.svg' %}" alt="★" width="20" height="20">
+                                    <img src="{% static 'icons/material-symbols_star.svg' %}" alt="★" width="20" height="20">
+                                </div>
+                                <p class="testimonial-text">
+                                    {{ testimonial.text }}
+                                </p>
+                            </div>
+                            <div class="testimonial-author">
+                                <p class="author-name">{{ testimonial.author_name }}</p>
+                                <p class="author-role">{{ testimonial.author_role }}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% empty %}
+                <p class="text-center">No testimonials available at the moment.</p>
+                {% endfor %}
+            </div>
+        </div>
+
+    </section>
+
+    <section class="video-section" id="videoTestimonials">
+      <div class="container">
+        <div class="row justify-content-center text-center mb-5 reveal visible">
+          <div class="col-lg-7">
+            <div class="section-tag justify-content-center">Video Testimonials</div>
+            <h2 class="heading-1">Hear It from Them Directly.</h2>
+            <p class="sub-heading-1 mt-3">Our clients tell their transformation story better than we ever could.</p>
+          </div>
+        </div>
+        <div class="row g-4">
+
+          <div class="col-md-4 reveal visible">
+            <div class="video-card">
+              <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&amp;q=80" alt="Video">
+              <div class="video-overlay">
+                <div class="video-duration"><i class="bi bi-play-fill"></i> 2:34</div>
+                <button class="play-btn"><i class="bi bi-play-fill"></i></button>
+                <div class="video-info">
+                  <div class="video-name">Rajesh Kumar — Crestline Industries</div>
+                  <div class="video-company">Quarry &amp; Crusher ERP</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 reveal visible" style="transition-delay:.1s;">
+            <div class="video-card">
+              <img src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=600&amp;q=80" alt="Video">
+              <div class="video-overlay">
+                <div class="video-duration"><i class="bi bi-play-fill"></i> 3:12</div>
+                <button class="play-btn"><i class="bi bi-play-fill"></i></button>
+                <div class="video-info">
+                  <div class="video-name">Priya Menon — ConcreteMax</div>
+                  <div class="video-company">Ready-Mix Concrete ERP</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 reveal visible" style="transition-delay:.2s;">
+            <div class="video-card">
+              <img src="https://images.unsplash.com/photo-1565043666747-69f6646db940?w=600&amp;q=80" alt="Video">
+              <div class="video-overlay">
+                <div class="video-duration"><i class="bi bi-play-fill"></i> 1:58</div>
+                <button class="play-btn"><i class="bi bi-play-fill"></i></button>
+                <div class="video-info">
+                  <div class="video-name">Vikram Nair — Precision Parts</div>
+                  <div class="video-company">Manufacturing ERP</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="open-cta">
+      <div class="container reveal visible">
+        <div class="open-cta-card">
+          <div class="row align-items-center g-4 position-relative" style="z-index:1;">
+            <div class="col-lg-7">
+              <h2 class="heading-1 text-white text-start mt-2">Your Success Story Starts Here.</h2>
+              <p class="sub-heading-1 text-white mt-3 mb-0">
+                Join 600+ businesses that have already transformed their operations. Let's build your story together.
+              </p>
+            </div>
+            <div class="col-lg-5 d-flex flex-wrap gap-3 justify-content-lg-end">
+              <button class="btn-primary-teal" onclick="openModal('Open Application','General')">
+                <i class="bi bi-telephone"></i> Talk to Us
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+{% endblock %}

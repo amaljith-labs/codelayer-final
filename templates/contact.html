@@ -1,0 +1,231 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Contact — Codelayer Technologies{% endblock %}
+
+{% block content %}
+
+    <section class="about-header" style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('{% static 'images/24179.jpg' %}') no-repeat center center / cover;">
+        <div class="container h-100 d-flex align-items-center justify-content-center">
+            <div class="about-content text-center text-white">
+                <div class="product-badge">Get in Touch</div>
+                <h1 class="mt-3 mb-3">Let's Build Something Great Together.</h1>
+                <p class="lead mx-auto" style="max-width: 700px;">
+                    Whether you're ready to transform your operations or just exploring your options — our team is here to guide you every step of the way.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-section">
+      <div class="container">
+        <div class="row g-5">
+
+          <!-- Form -->
+          <div class="col-lg-7 reveal visible">
+            <div class="form-card">
+              <h3 class="heading-1 text-start">Send Us a Message</h3>
+              <p class="sub-heading-1 mb-5">Fill in below and we'll get back to you within one business day.</p>
+
+              <form id="contactForm" novalidate="">
+                {% csrf_token %}
+                <div class="row g-3">
+
+                  <div class="col-sm-6">
+                    <label class="f-label">Full Name <span style="color:#1ec8a0">*</span></label>
+                    <input type="text" name="full_name" class="f-control" placeholder="Your full name" required>
+                  </div>
+
+                  <div class="col-sm-6">
+                    <label class="f-label">Email Address <span style="color:#1ec8a0">*</span></label>
+                    <input type="email" name="email" class="f-control" placeholder="you@company.com" required>
+                  </div>
+
+                  <div class="col-sm-6">
+                    <label class="f-label">Phone Number <span style="color:#1ec8a0">*</span></label>
+                    <input type="tel" name="phone" class="f-control" placeholder="+91 98765 43210" required maxlength="10">
+                  </div>
+
+                  <div class="col-sm-6">
+                    <label class="f-label">Company Name <span style="color:#1ec8a0">*</span></label>
+                    <input type="text" name="company" class="f-control" placeholder="Your company" required>
+                  </div>
+
+                  <div class="col-12">
+                    <label class="f-label">I'm Interested In <span style="color:#1ec8a0">*</span></label>
+                    <div class="interest-grid mt-1" id="interestGrid">
+                      <div class="int-chip" onclick="toggleChip(this)"><i class="bi bi-layers-fill"></i> Quarry &amp; Crusher ERP</div>
+                      <div class="int-chip" onclick="toggleChip(this)"><i class="bi bi-building-fill"></i> Ready-Mix Concrete ERP</div>
+                      <div class="int-chip" onclick="toggleChip(this)"><i class="bi bi-bricks"></i> Brick Manufacturing ERP</div>
+                      <div class="int-chip" onclick="toggleChip(this)"><i class="bi bi-grid-3x3-gap-fill"></i> Other ERP</div>
+                      <div class="int-chip" onclick="toggleChip(this)"><i class="bi bi-gear-fill"></i> ERP Implementation</div>
+                      <div class="int-chip" onclick="toggleChip(this)"><i class="bi bi-code-slash"></i> Customization</div>
+                      <div class="int-chip" onclick="toggleChip(this)"><i class="bi bi-puzzle-fill"></i> Integration Services</div>
+                      <div class="int-chip" onclick="toggleChip(this)"><i class="bi bi-headset"></i> Support / AMC</div>
+                    </div>
+                  </div>
+
+                  <div class="col-12">
+                    <label class="f-label">How would you like to proceed? <span style="color:#1ec8a0">*</span></label>
+                    <div class="d-flex flex-wrap gap-3 mt-1">
+                      <div class="form-check custom-radio">
+                        <input class="form-check-input" type="radio" name="req_type" id="reqDemo" value="Request a Demo" checked>
+                        <label class="form-check-label" for="reqDemo">Request a Demo</label>
+                      </div>
+                      <div class="form-check custom-radio">
+                        <input class="form-check-input" type="radio" name="req_type" id="reqVisit" value="Site Visit">
+                        <label class="form-check-label" for="reqVisit">Schedule Site Visit</label>
+                      </div>
+                      <div class="form-check custom-radio">
+                        <input class="form-check-input" type="radio" name="req_type" id="reqInfo" value="General Inquiry">
+                        <label class="form-check-label" for="reqInfo">General Inquiry</label>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-12">
+                    <label class="f-label">Message <span style="color:#1ec8a0">*</span></label>
+                    <textarea name="message" class="f-control" rows="4" placeholder="Tell us about your business..." required></textarea>
+                  </div>
+
+                  <div class="col-sm-6">
+                    <label class="f-label">How did you hear about us? <span style="color:#1ec8a0">*</span></label>
+                    <select name="source" class="f-control" required>
+                      <option value="" disabled selected>Select…</option>
+                      <option value="Google">Google / Search Engine</option>
+                      <option value="LinkedIn">LinkedIn</option>
+                      <option value="Referral">Referral / Word of Mouth</option>
+                      <option value="Social Media">Social Media</option>
+                      <option value="Industry Event">Industry Event</option>
+                      <option value="Other">Other</option>
+                    </select>
+                  </div>
+
+                  <div class="col-sm-6 d-flex align-items-end">
+                    <div class="d-flex align-items-center gap-2 pb-1" style="font-size:.8rem;color:#6b8580;">
+                      <i class="bi bi-shield-check" style="color:#1ec8a0;font-size:1rem;"></i>
+                      We never share your information.
+                    </div>
+                  </div>
+
+                  <div class="col-12 mt-3">
+                    <button type="submit" id="submitBtn" class="btn-cta-primary w-100">
+                      Send Message <i class="bi bi-arrow-right"></i>
+                    </button>
+                  </div>
+
+                </div>
+              </form>
+
+              <div class="form-success" id="formSuccess" style="display:none;">
+                <div class="success-circle"><i class="bi bi-check-lg"></i></div>
+                <h4 style="font-weight:800;font-size:1.3rem;color:#1a2421;margin-bottom:.5rem;">Message Sent!</h4>
+                <p style="color:#6b8580;font-size:.9rem;font-weight:300;max-width:340px;margin:0 auto;">
+                  Thanks for reaching out! A member of our team will be in touch within one business day.
+                </p>
+              </div>
+            </div>
+          </div>
+
+
+          <!-- Info side -->
+          <div class="col-lg-5 reveal visible" style="transition-delay:.1s;">
+            <div class="info-side">
+              <div class="section-tag">Contact Details</div>
+              <h2 class="heading-1 text-start">We're Right Here.</h2>
+              <p class="sub-heading-1 mb-4">Reach us directly through any channel below. Our team is available Monday to Saturday, 9 AM – 6 PM IST.</p>
+
+              <!-- Info cards -->
+              <div class="info-card">
+                <div class="ic-icon"><i class="bi bi-telephone-fill"></i></div>
+                <div>
+                  <div class="ic-label">Phone</div>
+                  <div class="ic-value">
+                    <a href="tel:+918943340336">+91 89433 40336</a><br>
+                    <a href="tel:+918129562211">+91 81295 62211</a><br>
+                    <a href="tel:+918139854853">+91 81398 54853</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="info-card">
+                <div class="ic-icon"><i class="bi bi-envelope-fill"></i></div>
+                <div>
+                  <div class="ic-label">Email</div>
+                  <div class="ic-value"><a href="mailto:sales@codelayer.in">sales@codelayer.in</a></div>
+                </div>
+              </div>
+
+              <div class="info-card">
+                <div class="ic-icon"><i class="bi bi-geo-alt-fill"></i></div>
+                <div>
+                  <div class="ic-label">Office</div>
+                  <div class="ic-value">Kinfra Film And Video Park, 33,<br>Kazhakkoottam,<br>Thiruvananthapuram, Kerala 695585</div>
+                </div>
+              </div>
+
+
+              <!-- Social + Trust -->
+              <hr style="border-color:rgba(30,200,160,.12);margin:1.5rem 0 1.2rem;">
+
+              <p style="font-size:.76rem;color:#6b8580;letter-spacing:.08em;text-transform:uppercase;margin-bottom:.9rem;">Follow Us</p>
+              <div class="social-wrap">
+                <a href="https://in.linkedin.com/company/codelayertechnologies" target="_blank" class="soc-btn" title="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                <a href="https://www.facebook.com/codelayertech" target="_blank" class="soc-btn" title="Facebook"><i class="bi bi-facebook"></i></a>
+                <a href="https://www.instagram.com/codelayer_" target="_blank" class="soc-btn" title="Instagram"><i class="bi bi-instagram"></i></a>
+                <a href="#" target="_blank" class="soc-btn" title="YouTube"><i class="bi bi-youtube"></i></a>
+                <a href="#" target="_blank" class="soc-btn" title="X / Twitter"><i class="bi bi-twitter-x"></i></a>
+              </div>
+
+              <div class="trust-strip">
+                <span class="trust-badge"><i class="bi bi-patch-check-fill"></i> Odoo Gold Partner</span>
+                <span class="trust-badge"><i class="bi bi-building-check"></i> 600+ Clients</span>
+                <span class="trust-badge"><i class="bi bi-award-fill"></i> 25+ Years</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="map-section" style="padding: 2rem 0;">
+      <div class="container reveal visible">
+        <div class="row mb-4">
+          <div class="col">
+            <div class="section-tag">Find Us</div>
+              <h2 class="heading-1 text-start">Our Office Location</h2>
+          </div>
+        </div>
+        <div class="map-wrap">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3944.4!2d76.8795!3d8.5600!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b05bec1b2a3c6d9%3A0xabcdef1234567890!2sKinfra%20Film%20and%20Video%20Park%2C%20Kazhakkoottam%2C%20Thiruvananthapuram%2C%20Kerala%20695585!5e0!3m2!1sen!2sin!4v1700000000000" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-banner">
+
+        <div class="container">
+          <div class="row align-items-center g-4">
+              <div class="col-lg-7">
+                  <h2 class="heading-1 text-start text-white mt-0">Ready to Get Started?</h2>
+                  <p class="odoo-text text-white" style="max-width: 26rem;">
+                      Tell us about your business and we'll show you exactly how GrowBiz ERP can streamline your operations — no pressure, just clarity.
+                  </p>
+              </div>
+              <div class="col-lg-5 d-flex flex-wrap gap-3 justify-content-lg-end">
+                <a href="#" class="btn-cta-primary">
+                  Request a Demo <i class="bi bi-arrow-right"></i>
+                </a>
+                <a href="#" class="btn-cta-ghost">
+                  <i class="bi bi-telephone"></i> Schedule a Site Visit
+                </a>
+              </div>
+          </div>
+        </div>
+
+    </section>
+
+
+{% endblock %}

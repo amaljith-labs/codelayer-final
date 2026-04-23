@@ -1,0 +1,806 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Quarry Crusher ERP — Codelayer Technologies{% endblock %}
+
+{% block content %}
+
+    <section class="hero" id="overview">
+      <div class="hero-grid"></div>
+      <div class="container hero-content">
+        <div class="row align-items-end g-5">
+
+          <!-- Left: text -->
+          <div class="col-lg-6">
+            <div class="product-badge">GrowBiz ERP Suite</div>
+            <h1 class="hero-title mb-3">Quarry &amp; Crusher<br>ERP System</h1>
+            <p class="sub-heading-1 mt-3">The only ERP engineered ground-up for quarrying, crushing, and construction materials — with real-time tracking from extraction to dispatch.</p>
+
+            <div class="hero-pills">
+              <div class="h-pill"><i class="bi bi-check-circle-fill"></i> Weighbridge Integrated</div>
+              <div class="h-pill"><i class="bi bi-check-circle-fill"></i> Cloud &amp; On-Premise</div>
+              <div class="h-pill"><i class="bi bi-check-circle-fill"></i> Built on Odoo</div>
+              <div class="h-pill"><i class="bi bi-check-circle-fill"></i> Real-time Dashboards</div>
+            </div>
+
+            <div class="hero-cta d-flex flex-wrap gap-3 mt-4">
+              <a href="{% url 'code_app:contact' %}" class="btn-hero-primary"><i class="bi bi-play-circle-fill"></i> Request a Demo</a>
+              <a href="#overview-cards" class="btn-hero-ghost">Explore Features <i class="bi bi-arrow-down"></i></a>
+            </div>
+          </div>
+
+          <!-- Right: image -->
+          <div class="col-lg-6 reveal d-none d-lg-block visible" style="transition-delay:.2s;">
+            <div class="hero-img-panel" style="position:relative;">
+              <img src="{% static 'images/2151307748.jpg' %}" alt="Quarry Operations ERP Dashboard">
+              <div class="metric-float mf1">
+                <div class="mf-num">40%</div>
+                <div class="mf-lbl">Avg. efficiency gain</div>
+              </div>
+              <div class="metric-float mf2">
+                <div class="mf-num">Real-time</div>
+                <div class="mf-lbl">Production tracking</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <div class="feat-nav-wrap d-none" id="featNavWrap">
+      <div class="container">
+        <div class="feat-nav" id="featNav">
+          <button class="fn-btn active" data-target="overview">Overview</button>
+          <button class="fn-btn" data-target="why">Why This ERP</button>
+          <button class="fn-btn" data-target="modules">Modules</button>
+          <button class="fn-btn" data-target="features">Features</button>
+          <button class="fn-btn" data-target="integrations">Integrations</button>
+          <button class="fn-btn" data-target="flow">How It Works</button>
+          <button class="fn-btn" data-target="compare">Compare</button>
+          <button class="fn-btn" data-target="testimonials">Reviews</button>
+          <button class="fn-btn" data-target="implementation">Implementation</button>
+        </div>
+      </div>
+    </div>
+
+    <section class="overview-strip" id="overview-cards">
+      <div class="container">
+        <div class="row g-4 reveal visible">
+          <div class="col-6 col-lg-3">
+            <div class="ov-card">
+              <div class="ov-icon"><i class="bi bi-speedometer2"></i></div>
+              <div class="ov-num">40%</div>
+              <h6>Efficiency Gain</h6>
+              <p>Average operational efficiency improvement reported by clients</p>
+            </div>
+          </div>
+          <div class="col-6 col-lg-3">
+            <div class="ov-card">
+              <div class="ov-icon"><i class="bi bi-truck-flatbed"></i></div>
+              <div class="ov-num">100%</div>
+              <h6>Dispatch Visibility</h6>
+              <p>End-to-end tracking from weighbridge to delivery confirmation</p>
+            </div>
+          </div>
+          <div class="col-6 col-lg-3">
+            <div class="ov-card">
+              <div class="ov-icon"><i class="bi bi-lightning-charge-fill"></i></div>
+              <div class="ov-num">Live</div>
+              <h6>Production Data</h6>
+              <p>Real-time production tracking with input/output analysis</p>
+            </div>
+          </div>
+          <div class="col-6 col-lg-3">
+            <div class="ov-card">
+              <div class="ov-icon"><i class="bi bi-currency-rupee"></i></div>
+              <div class="ov-num">0</div>
+              <h6>Manual Entries</h6>
+              <p>Fully automated billing, invoicing and financial reporting</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════ WHY THIS ERP ══════════ -->
+
+    <section class="why-section" id="why">
+      <div class="container">
+        <div class="row align-items-start g-5">
+
+          <!-- Problems -->
+          <div class="col-lg-5 reveal visible">
+            <div class="section-tag">The Challenge</div>
+            <h2 class="heading-1 text-start mb-4">Without a <em>Specialized ERP</em></h2>
+
+            <div class="problem-card">
+              <div class="problem-icon"><i class="bi bi-x-circle-fill"></i></div>
+              <div>
+                <h6>Manual Weighbridge Logs</h6>
+                <p>Vehicle weights recorded on paper lead to disputes, theft, and reconciliation nightmares.</p>
+              </div>
+            </div>
+            <div class="problem-card">
+              <div class="problem-icon"><i class="bi bi-x-circle-fill"></i></div>
+              <div>
+                <h6>No Production Visibility</h6>
+                <p>Crusher output tracked in notebooks. Management has zero real-time picture of daily yield.</p>
+              </div>
+            </div>
+            <div class="problem-card">
+              <div class="problem-icon"><i class="bi bi-x-circle-fill"></i></div>
+              <div>
+                <h6>Disconnected Finance</h6>
+                <p>Accounts run separately from operations — billing errors, delayed invoices, cash flow gaps.</p>
+              </div>
+            </div>
+            <div class="problem-card">
+              <div class="problem-icon"><i class="bi bi-x-circle-fill"></i></div>
+              <div>
+                <h6>Fleet Management Gaps</h6>
+                <p>No fuel tracking, no trip logs, no maintenance schedule — fleet costs spiral out of control.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Divider -->
+          <div class="col-lg-2 d-none d-lg-flex flex-column align-items-center justify-content-center" style="padding-top:4rem;">
+            <div style="width:2px;flex:1;background:linear-gradient(to bottom,rgba(30,200,160,.08),rgba(30,200,160,.30),rgba(30,200,160,.08));"></div>
+            <div style="width:44px;height:44px;border-radius:50%;background:#1ec8a0;display:flex;align-items:center;justify-content:center;color:#fff;font-size:1.1rem;margin:.8rem 0;flex-shrink:0;">
+              <i class="bi bi-arrow-right"></i>
+            </div>
+            <div style="width:2px;flex:1;background:linear-gradient(to bottom,rgba(30,200,160,.08),rgba(30,200,160,.30),rgba(30,200,160,.08));"></div>
+          </div>
+
+          <!-- Solutions -->
+          <div class="col-lg-5 reveal visible" style="transition-delay:.12s;">
+            <div class="section-tag">The Solution</div>
+            <h2 class="heading-1 text-start mb-4">With <em>GrowBiz Quarry ERP</em></h2>
+
+            <div class="solution-card">
+              <div class="solution-icon"><i class="bi bi-check-circle-fill"></i></div>
+              <div>
+                <h6>Automated Weighbridge Integration</h6>
+                <p>Auto-capture vehicle weights, auto-generate gatepasses, zero manual intervention.</p>
+              </div>
+            </div>
+            <div class="solution-card">
+              <div class="solution-icon"><i class="bi bi-check-circle-fill"></i></div>
+              <div>
+                <h6>Live Production Dashboard</h6>
+                <p>Real-time crusher output, input-output ratios, and performance KPIs on one screen.</p>
+              </div>
+            </div>
+            <div class="solution-card">
+              <div class="solution-icon"><i class="bi bi-check-circle-fill"></i></div>
+              <div>
+                <h6>Unified Financial Module</h6>
+                <p>Operations and accounts fully synced — auto-billing, tax, and financial reports in seconds.</p>
+              </div>
+            </div>
+            <div class="solution-card">
+              <div class="solution-icon"><i class="bi bi-check-circle-fill"></i></div>
+              <div>
+                <h6>Complete Fleet Control</h6>
+                <p>Trip logs, fuel monitoring, maintenance alerts, and vehicle-wise cost analytics built-in.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="modules-section" id="modules">
+      <div class="container">
+        <div class="row justify-content-center text-center mb-5 reveal visible">
+          <div class="col-lg-7">
+            <div class="section-tag justify-content-center">Core Modules</div>
+            <h2 class="heading-1">Everything Your Operation Needs.</h2>
+            <p class="sub-heading-1 mt-3">12 integrated modules purpose-built for quarry and crusher businesses — no bolt-ons, no workarounds.</p>
+          </div>
+        </div>
+        <div class="row g-4">
+
+          <div class="col-sm-6 col-lg-4 reveal visible">
+            <div class="module-card">
+              <div class="module-icon"><i class="bi bi-layers-fill"></i></div>
+              <h5>Quarry Operations</h5>
+              <p>Raw material extraction tracking, site-level stock monitoring, and blasting record management.</p>
+              <div><span class="module-tag">Site Tracking</span><span class="module-tag">Stock</span><span class="module-tag">Extraction</span></div>
+            </div>
+          </div>
+
+          <div class="col-sm-6 col-lg-4 reveal visible" style="transition-delay:.06s;">
+            <div class="module-card">
+              <div class="module-icon"><i class="bi bi-gear-wide-connected"></i></div>
+              <h5>Crusher Plant Ops</h5>
+              <p>Production tracking, input-output analysis, machine performance monitoring, and shift reports.</p>
+              <div><span class="module-tag">Production</span><span class="module-tag">Shift Reports</span><span class="module-tag">KPIs</span></div>
+            </div>
+          </div>
+
+          <div class="col-sm-6 col-lg-4 reveal visible" style="transition-delay:.12s;">
+            <div class="module-card">
+              <div class="module-icon"><i class="bi bi-truck-front-fill"></i></div>
+              <h5>Weighbridge Integration</h5>
+              <p>Auto-capture vehicle weights on entry and exit, load measurement, and reconciliation reports.</p>
+              <div><span class="module-tag">Auto Capture</span><span class="module-tag">Tare Weight</span><span class="module-tag">Reconcile</span></div>
+            </div>
+          </div>
+
+          <div class="col-sm-6 col-lg-4 reveal visible" style="transition-delay:.18s;">
+            <div class="module-card">
+              <div class="module-icon"><i class="bi bi-file-earmark-check-fill"></i></div>
+              <h5>Gatepass Management</h5>
+              <p>Digital gatepass generation, controlled dispatch tracking, and audit trail for all material movement.</p>
+              <div><span class="module-tag">Digital Pass</span><span class="module-tag">Dispatch</span><span class="module-tag">Audit</span></div>
+            </div>
+          </div>
+
+          <div class="col-sm-6 col-lg-4 reveal visible" style="transition-delay:.24s;">
+            <div class="module-card">
+              <div class="module-icon"><i class="bi bi-boxes"></i></div>
+              <h5>Purchase &amp; Inventory</h5>
+              <p>End-to-end procurement — raw materials, spare parts, consumables with real-time stock balance.</p>
+              <div><span class="module-tag">Procurement</span><span class="module-tag">Stock</span><span class="module-tag">Spares</span></div>
+            </div>
+          </div>
+
+          <div class="col-sm-6 col-lg-4 reveal visible" style="transition-delay:.30s;">
+            <div class="module-card">
+              <div class="module-icon"><i class="bi bi-truck"></i></div>
+              <h5>Fleet Management</h5>
+              <p>Vehicle tracking, trip management, fuel log monitoring, driver records and dispatch planning.</p>
+              <div><span class="module-tag">Trips</span><span class="module-tag">Fuel</span><span class="module-tag">Drivers</span></div>
+            </div>
+          </div>
+
+          <div class="col-sm-6 col-lg-4 reveal visible" style="transition-delay:.36s;">
+            <div class="module-card">
+              <div class="module-icon"><i class="bi bi-tools"></i></div>
+              <h5>Maintenance Management</h5>
+              <p>Scheduled servicing, breakdown tracking, and spare parts consumption for all plant and fleet assets.</p>
+              <div><span class="module-tag">Preventive</span><span class="module-tag">Breakdown</span><span class="module-tag">MTTR</span></div>
+            </div>
+          </div>
+
+          <div class="col-sm-6 col-lg-4 reveal visible" style="transition-delay:.42s;">
+            <div class="module-card">
+              <div class="module-icon"><i class="bi bi-receipt-cutoff"></i></div>
+              <h5>Accounts &amp; Finance</h5>
+              <p>Automated billing, tax management, payment tracking, profit &amp; loss, and balance sheet reporting.</p>
+              <div><span class="module-tag">Billing</span><span class="module-tag">GST</span><span class="module-tag">P&amp;L</span></div>
+            </div>
+          </div>
+
+          <div class="col-sm-6 col-lg-4 reveal visible" style="transition-delay:.48s;">
+            <div class="module-card">
+              <div class="module-icon"><i class="bi bi-graph-up-arrow"></i></div>
+              <h5>Dashboards &amp; Reports</h5>
+              <p>Role-based dashboards, operational KPIs, sales analytics, and exportable management reports.</p>
+              <div><span class="module-tag">Role-based</span><span class="module-tag">Export</span><span class="module-tag">Live</span></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════ INTEGRATIONS & AUTOMATION ══════════ -->
+
+    <section style="padding:6rem 0;background:#f4faf8;" id="integrations">
+      <div class="container">
+        <div class="row align-items-center g-5">
+
+          <!-- Left: text -->
+          <div class="col-lg-5">
+            <div class="section-tag">Integrations &amp; Automation</div>
+            <h2 class="heading-1 mb-3 text-start">Connects With Your Existing Setup</h2>
+            <p class="sub-heading-1 mb-3">
+              GrowBiz Quarry ERP doesn't work in isolation — it integrates directly with your hardware, devices, and third-party software to create a fully automated, zero-manual workflow from plant floor to finance.
+            </p>
+            <div class="box-123 mt-4 p-3" style="">
+              <div class="text-501">Supported Integrations</div>
+              <div style="display:flex;flex-wrap:wrap;gap:.5rem;">
+                <span class="module-tag">Weighbridge</span>
+                <span class="module-tag">CCTV / Camera</span>
+                <span class="module-tag">GPS Tracking</span>
+                <span class="module-tag">Biometric</span>
+                <span class="module-tag">Mobile App</span>
+                <span class="module-tag">e-Invoice</span>
+                <span class="module-tag">GST Portal</span>
+                <span class="module-tag">Third-party APIs</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: integration cards grid -->
+          <div class="col-lg-7" style="transition-delay:.1s;">
+            <div class="row g-3">
+
+              <div class="col-sm-6">
+                <div class="box-124">
+                  <div class="icon-wrapper"><i class="bi bi-truck-front-fill"></i></div>
+                  <h6>Weighbridge Integration</h6>
+                  <p>Auto-capture vehicle weights directly from hardware. Zero manual entry, zero disputes.</p>
+                </div>
+              </div>
+
+              <div class="col-sm-6">
+                <div class="box-124">
+                  <div class="icon-wrapper"><i class="bi bi-camera-video-fill"></i></div>
+                  <h6>CCTV / Camera Integration</h6>
+                  <p>Live camera feeds linked to weighbridge and gate operations for complete site security and audit.</p>
+                </div>
+              </div>
+
+              <div class="col-sm-6">
+                <div class="box-124">
+                  <div class="icon-wrapper"><i class="bi bi-fingerprint"></i></div>
+                  <h6>Biometric & Attendance</h6>
+                  <p>Direct biometric device integration for automated staff attendance and access management.</p>
+                </div>
+              </div>
+
+              <div class="col-sm-6">
+                <div class="box-124">
+                  <div class="icon-wrapper"><i class="bi bi-geo-alt-fill"></i></div>
+                  <h6>GPS / Vehicle Tracking</h6>
+                  <p>Real-time GPS tracking for all vehicles — live location, trip history, and route deviation alerts.</p>
+                </div>
+              </div>
+
+              <div class="col-sm-6">
+                <div class="box-124">
+                  <div class="icon-wrapper"><i class="bi bi-phone-fill"></i></div>
+                  <h6>Mobile App Integration</h6>
+                  <p>Mobile access for field staff, drivers and supervisors — approvals, updates and reports on-the-go.</p>
+                </div>
+              </div>
+
+              <div class="col-sm-6">
+                <div class="box-124">
+                  <div class="icon-wrapper"><i class="bi bi-receipt-fill"></i></div>
+                  <h6>e-Invoice & GST Integration</h6>
+                  <p>Government-compliant e-Invoice generation and direct GST portal integration for seamless filing.</p>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Third-party note -->
+            <div class=" third-party-box mt-3 p-3 d-flex align-items-center gap-2">
+              <i class="bi bi-plugin" style="color:#1ec8a0;font-size:1.1rem;flex-shrink:0;"></i>
+              <p class="sub-heading-1">
+                <strong style="color:#1a2421;font-weight:600;">Third-party Software &amp; API Integration</strong> — Connect with any existing ERP, accounting software, or business tool via standard APIs.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="flow-section" id="flow">
+      <div class="container">
+        <div class="text-center mb-5 reveal visible">
+          <div class="section-tag justify-content-center" style="color:#1ec8a0;">Operational Flow</div>
+          <h2 class="heading-1 text-center" style="color:#f4faf8;">From <span style="color:#1ec8a0;">Planning to Billing</span> — Every Step Managed</h2>
+          <p class="sub-heading-1 mt-3">
+            We manage the complete quarry and crusher lifecycle — from site planning and blasting through extraction,
+            processing, stock management, dispatch, and invoicing.
+          </p>
+        </div>
+        <div class="row align-items-start g-3 reveal visible mt-5">
+
+          <div class="col process-step">
+            <div class="step-num">01</div>
+            <h6>Planning</h6>
+            <p>Site planning, resource scheduling and production targets</p>
+          </div>
+          <div class="col-auto step-arrow d-none d-md-flex"><i class="bi bi-chevron-right"></i></div>
+
+          <div class="col process-step">
+            <div class="step-num">02</div>
+            <h6>Drilling & Blasting</h6>
+            <p>Drill pattern management, blast records and safety logs</p>
+          </div>
+          <div class="col-auto step-arrow d-none d-md-flex"><i class="bi bi-chevron-right"></i></div>
+
+          <div class="col process-step">
+            <div class="step-num">03</div>
+            <h6>Excavation</h6>
+            <p>Raw material extraction tracking with site-level stock entry</p>
+          </div>
+          <div class="col-auto step-arrow d-none d-md-flex"><i class="bi bi-chevron-right"></i></div>
+
+          <div class="col process-step">
+            <div class="step-num">04</div>
+            <h6>Crushing</h6>
+            <p>Plant operations with real-time input/output yield analysis</p>
+          </div>
+          <div class="col-auto step-arrow d-none d-md-flex"><i class="bi bi-chevron-right"></i></div>
+
+          <div class="col process-step">
+            <div class="step-num">05</div>
+            <h6>Screening</h6>
+            <p>Grade-wise material classification and stock segregation</p>
+          </div>
+          <div class="col-auto step-arrow d-none d-md-flex"><i class="bi bi-chevron-right"></i></div>
+
+          <div class="col process-step">
+            <div class="step-num">06</div>
+            <h6>Stock</h6>
+            <p>Real-time finished goods inventory and stock balance</p>
+          </div>
+
+        </div>
+
+        <div class="text-center reveal mt-5 mb-4 visible" style="transition-delay:.12s;">
+          <div style="display:inline-flex;align-items:center;gap:.7rem;background:rgba(30,200,160,.08);border:1px solid rgba(30,200,160,.20);border-radius:100px;padding:.4rem 1.2rem;">
+            <i class="bi bi-arrow-down" style="color:#1ec8a0;font-size:.9rem;"></i>
+            <span style="font-size:.76rem;color:#1ec8a0;letter-spacing:.08em;text-transform:uppercase;font-weight:600; font-family: DM Sans, sans-serif;">Continues to Dispatch &amp; Billing</span>
+            <i class="bi bi-arrow-down" style="color:#1ec8a0;font-size:.9rem;"></i>
+          </div>
+        </div>
+
+        <div class="row align-items-start g-3 reveal visible mt-5">
+
+          <div class="col process-step">
+            <div class="step-num">07</div>
+            <h6>Sales Order</h6>
+            <p>Customer order booking with grade and quantity confirmation</p>
+          </div>
+          <div class="col-auto step-arrow d-none d-md-flex"><i class="bi bi-chevron-right"></i></div>
+
+          <div class="col process-step">
+            <div class="step-num">08</div>
+            <h6>Weighbridge</h6>
+            <p>Auto vehicle weight capture, tare and net load measurement</p>
+          </div>
+          <div class="col-auto step-arrow d-none d-md-flex"><i class="bi bi-chevron-right"></i></div>
+
+          <div class="col process-step">
+            <div class="step-num">09</div>
+            <h6>Gatepass</h6>
+            <p>Digital gatepass generation and controlled material movement</p>
+          </div>
+          <div class="col-auto step-arrow d-none d-md-flex"><i class="bi bi-chevron-right"></i></div>
+
+          <div class="col process-step">
+            <div class="step-num">10</div>
+            <h6>Dispatch</h6>
+            <p>Fleet assignment, trip tracking and delivery confirmation</p>
+          </div>
+          <div class="col-auto step-arrow d-none d-md-flex"><i class="bi bi-chevron-right"></i></div>
+
+          <div class="col process-step">
+            <div class="step-num">11</div>
+            <h6>Billing</h6>
+            <p>Auto-invoice, GST / e-Invoice, payment reconciliation</p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <section class="deepdive-section" id="features">
+      <div class="container">
+        <div class="row justify-content-center text-center mb-5 reveal visible">
+          <div class="col-lg-7">
+            <div class="section-tag justify-content-center">Deep Dive</div>
+            <h2 class="heading-1">Explore Every Feature.</h2>
+          </div>
+        </div>
+        <div class="row g-5 align-items-start">
+
+          <!-- Tabs -->
+          <div class="col-lg-4 reveal visible">
+            <div class="dd-tabs" id="ddTabs">
+              <div class="dd-tab active" onclick="switchTab(0)">
+                <div class="dd-tab-icon"><i class="bi bi-truck-front-fill"></i></div>
+                <div><h6>Weighbridge</h6><p>Automated weight capture</p></div>
+              </div>
+              <div class="dd-tab" onclick="switchTab(1)">
+                <div class="dd-tab-icon"><i class="bi bi-gear-wide-connected"></i></div>
+                <div><h6>Plant Operations</h6><p>Real-time production control</p></div>
+              </div>
+              <div class="dd-tab" onclick="switchTab(2)">
+                <div class="dd-tab-icon"><i class="bi bi-truck"></i></div>
+                <div><h6>Fleet &amp; Dispatch</h6><p>Vehicle and trip management</p></div>
+              </div>
+              <div class="dd-tab" onclick="switchTab(3)">
+                <div class="dd-tab-icon"><i class="bi bi-receipt-cutoff"></i></div>
+                <div><h6>Finance &amp; Accounts</h6><p>Unified billing and reporting</p></div>
+              </div>
+              <div class="dd-tab" onclick="switchTab(4)">
+                <div class="dd-tab-icon"><i class="bi bi-graph-up-arrow"></i></div>
+                <div><h6>Analytics Dashboard</h6><p>Executive-level insights</p></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Panel -->
+          <div class="col-lg-8 reveal visible" style="transition-delay:.12s;">
+            <div id="ddPanels">
+
+              <div class="dd-panel active">
+                <div class="dd-panel-inner">
+                  <div class="dd-img mb-3"><img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=700&amp;q=80" alt="Weighbridge"></div>
+                  <h4>Weighbridge Integration</h4>
+                  <p>Seamlessly integrates with physical weighbridge hardware to auto-capture gross, tare and net weights — eliminating manual errors and disputes entirely.</p>
+                  <ul class="dd-feature-list">
+                    <li>
+                      <img src="{% static 'icons/icons8-tick.svg' %}" style="width: 24px;height: 24px">
+                      <span>Auto-fetch weight from hardware on vehicle arrival</span>
+                    </li>
+                    <li>
+                      <img src="{% static 'icons/icons8-tick.svg' %}" style="width: 24px;height: 24px">
+                      <span>Tare weight management per registered vehicle</span>
+                    </li>
+                    <li>
+                      <img src="{% static 'icons/icons8-tick.svg' %}" style="width: 24px;height: 24px">
+                      <span>Net load calculation and instant gatepass generation</span>
+                    </li>
+                    <li>
+                      <img src="{% static 'icons/icons8-tick.svg' %}" style="width: 24px;height: 24px">
+                      <span>Vehicle-wise weight history and dispute resolution log</span>
+                    </li>
+                    <li>
+                      <img src="{% static 'icons/icons8-tick.svg' %}" style="width: 24px;height: 24px">
+                      <span>Multi-bridge support for large sites</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="dd-panel">
+                <div class="dd-panel-inner">
+                  <div class="dd-img mb-3"><img src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=700&amp;q=80" alt="Plant Operations"></div>
+                  <h4 >Plant Operations Control</h4>
+                  <p>Monitor every crusher, screen and conveyor in real time. Track material grades, throughput rates and downtime — all in one unified view.</p>
+                  <ul class="dd-feature-list">
+                    <li>
+                      <span><img src="{% static 'icons/icons8-tick.svg' %}" style="width: 24px;height: 24px"></span>
+                      Real-time production and throughput tracking
+                    </li>
+                    <li><img src="{% static 'icons/icons8-tick.svg' %}" style="width: 24px;height: 24px">Input-output ratio analysis per machine</li>
+                    <li><img src="{% static 'icons/icons8-tick.svg' %}" style="width: 24px;height: 24px">Shift-wise production reports and handover logs</li>
+                    <li><img src="{% static 'icons/icons8-tick.svg' %}" style="width: 24px;height: 24px">Breakdown recording and downtime tracking</li>
+                    <li><img src="{% static 'icons/icons8-tick.svg' %}" style="width: 24px;height: 24px">Grade-wise material output classification</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="dd-panel">
+                <div class="dd-panel-inner">
+                  <div class="dd-img mb-3"><img src="https://images.unsplash.com/photo-1570733577524-3a047079e80d?w=700&amp;q=80" alt="Fleet Management"></div>
+                  <h4 >Fleet &amp; Dispatch Management</h4>
+                  <p >Comprehensive fleet visibility — from trip planning to fuel reconciliation — so you always know where your vehicles are and what they're costing.</p>
+                  <ul class="dd-feature-list">
+                    <li><img src="{% static 'icons/icons8-tick.svg' %}" style="width: 24px;height: 24px">Trip creation, assignment and live status tracking</li>
+                    <li><img src="{% static 'icons/icons8-tick.svg' %}" style="width: 24px;height: 24px">Fuel issue and consumption monitoring per vehicle</li>
+                    <li><img src="{% static 'icons/icons8-tick.svg' %}" style="width: 24px;height: 24px">Driver records, licence and document management</li>
+                    <li><img src="{% static 'icons/icons8-tick.svg' %}" style="width: 24px;height: 24px">Vehicle-wise expense and profitability reports</li>
+                    <li><img src="{% static 'icons/icons8-tick.svg' %}" style="width: 24px;height: 24px">Scheduled and breakdown maintenance alerts</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="dd-panel">
+                <div class="dd-panel-inner">
+                  <div class="dd-img mb-3"><img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=700&amp;q=80" alt="Finance"></div>
+                  <h4>Finance &amp; Accounts</h4>
+                  <p>Fully unified accounting that syncs with operations automatically — no dual entry, no errors, no delays in financial reporting.</p>
+                  <ul class="dd-feature-list">
+                    <li><img src="{% static 'icons/icons8-tick.svg' %}" style="width: 24px;height: 24px">Auto-generated sales invoices from dispatch records</li>
+                    <li><img src="{% static 'icons/icons8-tick.svg' %}" style="width: 24px;height: 24px">GST / tax computation and filing-ready reports</li>
+                    <li><img src="{% static 'icons/icons8-tick.svg' %}" style="width: 24px;height: 24px">Vendor payment tracking and aging reports</li>
+                    <li><img src="{% static 'icons/icons8-tick.svg' %}" style="width: 24px;height: 24px">Customer ledger and outstanding balance management</li>
+                    <li><img src="{% static 'icons/icons8-tick.svg' %}" style="width: 24px;height: 24px">Profit &amp; Loss, Balance Sheet and cash flow statements</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="dd-panel">
+                <div class="dd-panel-inner">
+                  <div class="dd-img mb-3"><img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=700&amp;q=80" alt="Analytics"></div>
+                  <h4>Analytics &amp; Dashboards</h4>
+                  <p>Executive dashboards give management a complete picture of the business — production, sales, fleet and finance — in a single glance.</p>
+                  <ul class="dd-feature-list">
+                    <li><img src="{% static 'icons/icons8-tick.svg' %}" style="width: 24px;height: 24px">Role-based dashboards for management and operators</li>
+                    <li><img src="{% static 'icons/icons8-tick.svg' %}" style="width: 24px;height: 24px">Live production KPI widgets with trend graphs</li>
+                    <li><img src="{% static 'icons/icons8-tick.svg' %}" style="width: 24px;height: 24px">Sales performance by customer, grade and period</li>
+                    <li><img src="{% static 'icons/icons8-tick.svg' %}" style="width: 24px;height: 24px">Stock level alerts and reorder notifications</li>
+                    <li><img src="{% static 'icons/icons8-tick.svg' %}" style="width: 24px;height: 24px">Exportable reports in Excel and PDF formats</li>
+                  </ul>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════ COMPARE TABLE ══════════ -->
+
+    <section class="compare-section" id="compare">
+      <div class="container">
+        <div class="row justify-content-center text-center mb-5 reveal visible">
+          <div class="col-lg-7">
+            <div class="section-tag justify-content-center">Why GrowBiz</div>
+            <h2 class="heading-1">GrowBiz vs <span style="color:#1ec8a0;">Generic ERP</span></h2>
+          </div>
+        </div>
+        <div class="compare-table reveal visible" style="transition-delay:.08s;">
+          <div class="table-responsive-wrapper">
+            <table>
+              <thead>
+                <tr>
+                  <th>Feature</th>
+                  <th class="highlight">GrowBiz Quarry ERP</th>
+                  <th>Generic ERP</th>
+                  <th>Manual / Spreadsheet</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Weighbridge Integration</td>
+                  <td class="yes highlight-col"><i class="bi bi-check-circle-fill check-icon"></i> Built-in, auto-capture</td>
+                  <td class="no"><i class="bi bi-x-circle check-icon"></i> Not available</td>
+                  <td class="no"><i class="bi bi-x-circle check-icon"></i> Manual log</td>
+                </tr>
+                <tr>
+                  <td>Gatepass Management</td>
+                  <td class="yes highlight-col"><i class="bi bi-check-circle-fill check-icon"></i> Digital, automated</td>
+                  <td class="no"><i class="bi bi-x-circle check-icon"></i> Manual</td>
+                  <td class="no"><i class="bi bi-x-circle check-icon"></i> Paper-based</td>
+                </tr>
+                <tr>
+                  <td>Crusher Production Tracking</td>
+                  <td class="yes highlight-col"><i class="bi bi-check-circle-fill check-icon"></i> Real-time</td>
+                  <td style="color:#e09020;font-weight:500;"><i class="bi bi-dash-circle check-icon"></i> Requires customization</td>
+                  <td class="no"><i class="bi bi-x-circle check-icon"></i> Not feasible</td>
+                </tr>
+                <tr>
+                  <td>Fleet &amp; Trip Management</td>
+                  <td class="yes highlight-col"><i class="bi bi-check-circle-fill check-icon"></i> Full module included</td>
+                  <td style="color:#e09020;font-weight:500;"><i class="bi bi-dash-circle check-icon"></i> Add-on cost</td>
+                  <td class="no"><i class="bi bi-x-circle check-icon"></i> Not feasible</td>
+                </tr>
+                <tr>
+                  <td>Integrated Finance</td>
+                  <td class="yes highlight-col"><i class="bi bi-check-circle-fill check-icon"></i> Auto-synced</td>
+                  <td class="yes"><i class="bi bi-check-circle-fill check-icon"></i> Available</td>
+                  <td class="no"><i class="bi bi-x-circle check-icon"></i> Separate tool</td>
+                </tr>
+                <tr>
+                  <td>Implementation Time</td>
+                  <td class="yes highlight-col"><i class="bi bi-check-circle-fill check-icon"></i> 4–8 weeks</td>
+                  <td style="color:#e09020;font-weight:500;"><i class="bi bi-dash-circle check-icon"></i> 6–18 months</td>
+                  <td class="yes"><i class="bi bi-check-circle-fill check-icon"></i> Immediate</td>
+                </tr>
+                <tr>
+                  <td>Industry-specific Workflows</td>
+                  <td class="yes highlight-col"><i class="bi bi-check-circle-fill check-icon"></i> Pre-built</td>
+                  <td class="no"><i class="bi bi-x-circle check-icon"></i> Custom dev needed</td>
+                  <td class="no"><i class="bi bi-x-circle check-icon"></i> Not possible</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════ IMPLEMENTATION ══════════ -->
+
+    <section class="impl-section" id="implementation" style="background-image: linear-gradient(rgba(244, 250, 248, 0.9), rgba(244, 250, 248, 0.9)), url('{% static 'images/2151307749.webp' %}');">
+      <div class="container">
+        <div class="row g-5 align-items-start">
+          <div class="col-lg-5 reveal visible">
+            <div class="section-tag">Getting Started</div>
+            <h2 class="heading-1 mb-4 text-start">Your Implementation Journey</h2>
+            <p class="sub-heading-1 mb-4">We handle everything — from understanding your processes to going live and beyond. Typical timeline: <strong style="color:#1ec8a0;">4 to 8 weeks.</strong></p>
+            <div class="box-123 mt-4 p-3">
+              <div class="text-501">Typical Timeline</div>
+              <div style="display:flex;gap:.8rem;align-items:center;">
+                <div style="flex:1;height:8px;border-radius:100px;background:rgba(30,200,160,.12);position:relative;overflow:hidden;">
+                  <div style="position:absolute;inset:0;background:linear-gradient(90deg,#1ec8a0,#2ae8ba);border-radius:100px;animation:shimmer 2s linear infinite;background-size:200% 100%;"></div>
+                </div>
+                <div style="font-family:'DM Sans',sans-serif;font-weight:800;font-size:1rem;color:#1ec8a0;white-space:nowrap;">4 – 8 Weeks</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-7 reveal visible" style="transition-delay:.12s;">
+            <div class="impl-step"><div class="impl-num">01</div><div><h6>Discovery &amp; Analysis</h6><p>We study your plant layout, workflows, and existing tools — then design the perfect configuration for your operation.</p></div></div>
+            <div class="impl-connector"></div>
+            <div class="impl-step"><div class="impl-num">02</div><div><h6>System Configuration</h6><p>Your GrowBiz instance is set up with your products, customers, vendors, and operational parameters pre-loaded.</p></div></div>
+            <div class="impl-connector"></div>
+            <div class="impl-step"><div class="impl-num">03</div><div><h6>Weighbridge &amp; Hardware Setup</h6><p>Physical integration with your weighbridge hardware and any existing systems — tested for zero-error operation.</p></div></div>
+            <div class="impl-connector"></div>
+            <div class="impl-step"><div class="impl-num">04</div><div><h6>Data Migration</h6><p>Historical customer, vendor, product, and opening balance data is migrated and validated.</p></div></div>
+            <div class="impl-connector"></div>
+            <div class="impl-step"><div class="impl-num">05</div><div><h6>Training &amp; UAT</h6><p>Hands-on role-based training for your team, followed by a user acceptance test before go-live.</p></div></div>
+            <div class="impl-connector"></div>
+            <div class="impl-step" style="margin-bottom:0;"><div class="impl-num">06</div><div><h6>Go-Live &amp; Support</h6><p>We're on-site for go-live day. Post launch, continuous support via AMC or dedicated support plan.</p></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-banner">
+
+        <div class="container">
+          <div class="row align-items-center g-4">
+              <div class="col-lg-7">
+                  <h2 class="heading-1 text-start text-white mt-0">Ready to Get Started?</h2>
+                  <p class="odoo-text text-white" style="max-width: 26rem;">
+                      Tell us about your business and we'll show you exactly how GrowBiz ERP can streamline your operations — no pressure, just clarity.
+                  </p>
+              </div>
+              <div class="col-lg-5 d-flex flex-wrap gap-3 justify-content-lg-end">
+                <a href="#" class="btn-cta-primary">
+                  Request a Demo <i class="bi bi-arrow-right"></i>
+                </a>
+                <a href="#" class="btn-cta-ghost">
+                  <i class="bi bi-telephone"></i> Call Us
+                </a>
+              </div>
+          </div>
+        </div>
+
+    </section>
+
+    <!-- ══════════ OTHER PRODUCTS ══════════ -->
+
+    <section class="other-products">
+      <div class="container">
+        <div class="row justify-content-center text-center mb-5 reveal visible">
+          <div class="col-lg-6">
+            <div class="section-tag justify-content-center">Also in GrowBiz Suite</div>
+            <h2 class="heading-1">Explore Other Products</h2>
+          </div>
+        </div>
+        <div class="row g-4 justify-content-center">
+          <div class="col-md-5 reveal visible">
+            <a href="{% url 'code_app:ready_mix_erp' %}" class="op-card">
+              <div class="op-icon"><i class="bi bi-building-fill"></i></div>
+              <h5>Ready-Mix Concrete (RMC) ERP</h5>
+              <p>Purpose-built for RMC plants — batching control, mix design management, delivery tracking and quality consistency.</p>
+              <div class="op-link">Explore RMC ERP <i class="bi bi-arrow-right"></i></div>
+            </a>
+          </div>
+          <div class="col-md-5 reveal visible" style="transition-delay:.1s;">
+            <a href="{% url 'code_app:brick_erp' %}" class="op-card">
+              <div class="op-icon"><i class="bi bi-bricks"></i></div>
+              <h5>Brick Manufacturing ERP</h5>
+              <p>Purpose-built for brick production units — molding, drying, kiln firing, stock tracking, dispatch, and complete billing management.</p>
+              <div class="op-link">Explore Brick ERP <i class="bi bi-arrow-right"></i></div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+{% endblock %}
+
+
+
+<!--    <section class="about-header" style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('{% static 'images/2150377123.jpg' %}') no-repeat center center / cover;">-->
+<!--        <div class="container h-100 d-flex align-items-center justify-content-center">-->
+<!--            <div class="about-content text-center text-white">-->
+<!--                <span class="btn btn-pill-white text-white">Our Services</span>-->
+<!--                <h1 class="mt-3 mb-3">End-to-End Solutions, Zero Compromise.</h1>-->
+<!--                <p class="lead mx-auto" style="max-width: 700px;">-->
+<!--                    From initial consultation to post-launch support, we deliver every layer of your ERP journey — tailored, reliable, and built for the long run.-->
+<!--                </p>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </section>-->

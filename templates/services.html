@@ -1,0 +1,646 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Services — Codelayer Technologies{% endblock %}
+
+{% block content %}
+
+    <section class="about-header" style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('{% static 'images/2150377123.jpg' %}') no-repeat center center / cover;">
+        <div class="container h-100 d-flex align-items-center justify-content-center">
+            <div class="about-content text-center text-white">
+                <div class="product-badge">Our Services</div>
+                <h1 class="mt-3 mb-3">End-to-End Solutions, Zero Compromise.</h1>
+                <p class="lead mx-auto" style="max-width: 700px;">
+                    From initial consultation to post-launch support, we deliver every layer of your ERP journey — tailored, reliable, and built for the long run.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <div class="container my-5">
+
+
+        <div class="service-wrapper">
+          <div class="service-tab-container mb-3">
+            <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+              <li class="nav-item" role="presentation">
+                <button class="nav-link service-tab-links active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">ERP Implementation</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link service-tab-links" id="pills-analysis-tab" data-bs-toggle="pill" data-bs-target="#pills-analysis" type="button" role="tab" aria-controls="pills-analysis" aria-selected="false">Business Analysis & Consultation</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link service-tab-links" id="pills-custom-tab" data-bs-toggle="pill" data-bs-target="#pills-custom" type="button" role="tab" aria-controls="pills-custom" aria-selected="false">Customization</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link service-tab-links" id="pills-integration-tab" data-bs-toggle="pill" data-bs-target="#pills-integration" type="button" role="tab" aria-controls="pills-integration" aria-selected="false">Integration</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link service-tab-links" id="pills-migration-tab" data-bs-toggle="pill" data-bs-target="#pills-migration" type="button" role="tab" aria-controls="pills-migration" aria-selected="false">Data Migration</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link service-tab-links" id="pills-training-tab" data-bs-toggle="pill" data-bs-target="#pills-training" type="button" role="tab" aria-controls="pills-training" aria-selected="false">Training</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link service-tab-links" id="pills-demo-tab" data-bs-toggle="pill" data-bs-target="#pills-demo" type="button" role="tab" aria-controls="pills-demo" aria-selected="false">Demo & Learning</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link service-tab-links" id="pills-support-tab" data-bs-toggle="pill" data-bs-target="#pills-support" type="button" role="tab" aria-controls="pills-support" aria-selected="false">Support</button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link service-tab-links" id="pills-amc-tab" data-bs-toggle="pill" data-bs-target="#pills-amc" type="button" role="tab" aria-controls="pills-amc" aria-selected="false">AMC</button>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="tab-content" id="pills-tabContent">
+
+          <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+              <div class="container my-5">
+                  <div class="row row-cols-1 row-cols-md-2 g-5">
+                      <div class="col">
+
+                          <div class="svc-image-wrap">
+                              <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?w=800&amp;q=80" alt="ERP Implementation">
+                              <div class="img-teal-overlay"></div>
+                              <div class="svc-image-badge">
+                                <div class="badge-icon"><i class="bi bi-gear-fill"></i></div>
+                                <span>Full-cycle deployment</span>
+                              </div>
+                            </div>
+
+                      </div>
+                      <div class="col">
+
+                          <div class="section-tag">Service 01</div>
+                          <h2 class="heading-1 text-start mt-0">ERP Implementation</h2>
+                          <p class="odoo-text">
+                              We provide complete ERP implementation services tailored to your business requirements — covering
+                              system setup, configuration, and deployment for a smooth transition from existing processes to a unified, modern platform.
+                          </p>
+
+                          <ul class="scope-list">
+                              <li>
+                                <img src="{% static 'icons/icons8-tick.svg' %}" style="width: 24px;height: 24px">
+                                <span>Requirement gathering and in-depth analysis</span>
+                              </li>
+                              <li>
+                                <img src="{% static 'icons/icons8-tick.svg' %}" style="width: 24px;height: 24px">
+                                <span>System configuration, setup & module deployment</span>
+                              </li>
+                              <li>
+                                <img src="{% static 'icons/icons8-tick.svg' %}" style="width: 24px;height: 24px">
+                                <span>Rigorous testing and validation cycles</span>
+                              </li>
+                              <li>
+                                <img src="{% static 'icons/icons8-tick.svg' %}" style="width: 24px;height: 24px">
+                                <span>Go-live support and stabilization</span>
+                              </li>
+                            </ul>
+
+                          <div class="odoo-tags">
+                            <span class="odoo-tag">Odoo ERP</span>
+                            <span class="odoo-tag">Odoo CRM</span>
+                            <span class="odoo-tag">Odoo Accounting</span>
+                            <span class="odoo-tag">Odoo HR</span>
+                            <span class="odoo-tag">Odoo Manufacturing</span>
+                            <span class="odoo-tag">Odoo eCommerce</span>
+                          </div>
+
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+          <div class="tab-pane fade" id="pills-analysis" role="tabpanel" aria-labelledby="pills-analysis-tab">
+              <div class="container my-5">
+                  <div class="row row-cols-1 row-cols-md-2 g-5">
+
+                      <div class="col">
+
+                          <div class="section-tag">Service 02</div>
+                          <h2 class="heading-1 text-start mt-0">Business Analysis & Consultation</h2>
+                          <p class="odoo-text">
+                              Our team works closely with clients to deeply understand business processes and identify the
+                              best ERP fit. We analyze workflows and recommend optimized solutions that are tightly aligned with your operational goals.
+                          </p>
+
+                          <ul class="scope-list">
+                              <li>
+                                <img src="{% static 'icons/icons8-tick.svg' %}" style="width: 24px;height: 24px">
+                                <span>Comprehensive requirement analysis</span>
+                              </li>
+                              <li>
+                                <img src="{% static 'icons/icons8-tick.svg' %}" style="width: 24px;height: 24px">
+                                <span>Business process mapping & documentation</span>
+                              </li>
+                              <li>
+                                <img src="{% static 'icons/icons8-tick.svg' %}" style="width: 24px;height: 24px">
+                                <span>Gap analysis between current and desired state</span>
+                              </li>
+                              <li>
+                                <img src="{% static 'icons/icons8-tick.svg' %}" style="width: 24px;height: 24px">
+                                <span>Tailored solution design and roadmap</span>
+                              </li>
+                            </ul>
+
+                          <div class="odoo-tags">
+                            <span class="odoo-tag">Process Mapping</span>
+                            <span class="odoo-tag">Gap Analysis</span>
+                            <span class="odoo-tag">Solution Design</span>
+                          </div>
+
+                      </div>
+
+                      <div class="col">
+
+                          <div class="svc-image-wrap">
+                              <img src="{% static 'images/123.webp' %}" alt="ERP Implementation">
+                              <div class="img-teal-overlay"></div>
+                              <div class="svc-image-badge">
+                                <div class="badge-icon"><i class="bi bi-bar-chart-fill"></i></div>
+                                <span>Process-first approach</span>
+                              </div>
+                            </div>
+
+                      </div>
+
+                  </div>
+              </div>
+          </div>
+
+          <div class="tab-pane fade" id="pills-custom" role="tabpanel" aria-labelledby="pills-custom-tab">
+              <div class="container my-5">
+                  <div class="row row-cols-1 row-cols-md-2 g-5">
+
+                      <div class="col">
+
+                          <div class="svc-image-wrap">
+                              <img src="{% static 'images/photo-1461749280684-dccba630e2f6.jfif' %}" alt="ERP Implementation">
+                              <div class="img-teal-overlay"></div>
+                              <div class="svc-image-badge">
+                                <div class="badge-icon"><i class="bi bi-code-slash"></i></div>
+                                <span>Bespoke Development</span>
+                              </div>
+                            </div>
+
+                      </div>
+
+                      <div class="col">
+
+                          <div class="section-tag">Service 03</div>
+                          <h2 class="heading-1 text-start mt-0">Customization & Development</h2>
+                          <p class="odoo-text">
+                              Our team works closely with clients to deeply understand business processes and identify the
+                              best ERP fit. We analyze workflows and recommend optimized solutions that are tightly aligned with your operational goals.
+                          </p>
+
+                          <ul class="scope-list">
+                              <li>
+                                <img src="{% static 'icons/icons8-tick.svg' %}" style="width: 24px;height: 24px">
+                                <span>Comprehensive requirement analysis</span>
+                              </li>
+                              <li>
+                                <img src="{% static 'icons/icons8-tick.svg' %}" style="width: 24px;height: 24px">
+                                <span>Business process mapping & documentation</span>
+                              </li>
+                              <li>
+                                <img src="{% static 'icons/icons8-tick.svg' %}" style="width: 24px;height: 24px">
+                                <span>Gap analysis between current and desired state</span>
+                              </li>
+                              <li>
+                                <img src="{% static 'icons/icons8-tick.svg' %}" style="width: 24px;height: 24px">
+                                <span>Tailored solution design and roadmap</span>
+                              </li>
+                            </ul>
+
+                          <div class="odoo-tags">
+                            <span class="odoo-tag">Process Mapping</span>
+                            <span class="odoo-tag">Gap Analysis</span>
+                            <span class="odoo-tag">Solution Design</span>
+                          </div>
+
+                      </div>
+
+
+                  </div>
+              </div>
+          </div>
+
+          <div class="tab-pane fade" id="pills-integration" role="tabpanel" aria-labelledby="pills-integration-tab">
+              <div class="container my-5">
+                  <div class="row row-cols-1 row-cols-md-2 g-5">
+
+                      <div class="col">
+
+                          <div class="section-tag">Technical Services</div>
+                          <h2 class="heading-1 text-start mt-0">Integration Services</h2>
+                          <p class="odoo-text">
+                              We integrate GrowBiz ERP with third-party systems and hardware to ensure seamless data flow and operational efficiency across your entire tech stack.
+                          </p>
+
+                          <ul class="scope-list">
+                              <li>
+                                <img src="{% static 'icons/icons8-tick.svg' %}" style="width: 24px;height: 24px">
+                                <span>Weighbridge hardware integration</span>
+                              </li>
+                              <li>
+                                <img src="{% static 'icons/icons8-tick.svg' %}" style="width: 24px;height: 24px">
+                                <span>RESTful API & webhook integrations</span>
+                              </li>
+                              <li>
+                                <img src="{% static 'icons/icons8-tick.svg' %}" style="width: 24px;height: 24px">
+                                <span>Third-party software connectivity</span>
+                              </li>
+                            </ul>
+
+                          <div class="odoo-tags">
+                            <span class="odoo-tag">API</span>
+                            <span class="odoo-tag">Weigh Bridge</span>
+                            <span class="odoo-tag">IoT Devices</span>
+                          </div>
+
+                      </div>
+                      <div class="col">
+
+                          <div class="svc-image-wrap">
+                              <img src="{% static 'images/photo-1518186285589-2f7649de83e0.jfif' %}" alt="ERP Implementation">
+                              <div class="img-teal-overlay"></div>
+                              <div class="svc-image-badge">
+                                <div class="badge-icon"><i class="bi bi-puzzle-fill"></i></div>
+                                <span>Integration Services</span>
+                              </div>
+                            </div>
+
+                      </div>
+
+
+                  </div>
+              </div>
+          </div>
+
+          <div class="tab-pane fade" id="pills-migration" role="tabpanel" aria-labelledby="pills-migration-tab">
+              <div class="container my-5">
+                  <div class="row row-cols-1 row-cols-md-2 g-5">
+
+                      <div class="col">
+
+                          <div class="svc-image-wrap">
+                              <img src="{% static 'images/photo-1558494949-ef010cbdcc31.jfif' %}" alt="ERP Implementation">
+                              <div class="img-teal-overlay"></div>
+                              <div class="svc-image-badge">
+                                <div class="badge-icon"><i class="bi bi-cloud-upload-fill"></i></div>
+                                <span>Data Migration</span>
+                              </div>
+                            </div>
+
+                      </div>
+
+
+                      <div class="col">
+
+                          <div class="section-tag">Technical Services</div>
+                          <h2 class="heading-1 text-start mt-0">Data Migration</h2>
+                          <p class="odoo-text">
+                              We ensure secure and accurate migration of essential data from existing systems to your new ERP platform — preserving data integrity throughout the process.
+                          </p>
+
+                          <ul class="scope-list">
+                              <li>
+                                <img src="{% static 'icons/icons8-tick.svg' %}" style="width: 24px;height: 24px">
+                                <span>Data extraction, cleaning & transformation</span>
+                              </li>
+                              <li>
+                                <img src="{% static 'icons/icons8-tick.svg' %}" style="width: 24px;height: 24px">
+                                <span>Master data migration (customers, vendors, products)</span>
+                              </li>
+                              <li>
+                                <img src="{% static 'icons/icons8-tick.svg' %}" style="width: 24px;height: 24px">
+                                <span>Data import, validation & verification</span>
+                              </li>
+                            </ul>
+
+                          <div class="odoo-tags">
+                            <span class="odoo-tag">Excel / CSV</span>
+                            <span class="odoo-tag">Legacy ERP</span>
+                            <span class="odoo-tag">Validation</span>
+                            <span class="odoo-tag">Zero Downtime</span>
+                          </div>
+
+                      </div>
+
+                  </div>
+              </div>
+          </div>
+
+          <div class="tab-pane fade" id="pills-training" role="tabpanel" aria-labelledby="pills-training-tab">
+             <div class="container my-5">
+                  <div class="row row-cols-1 row-cols-md-2 g-5">
+
+
+                      <div class="col">
+
+                          <div class="section-tag">Services 06</div>
+                          <h2 class="heading-1 text-start mt-0">Training & User Onboarding</h2>
+                          <p class="odoo-text">
+                              We provide comprehensive, role-based training to ensure every member of your team can effectively operate the system and utilize its full capabilities from day one.
+                          </p>
+
+                          <ul class="scope-list">
+                              <li>
+                                <img src="{% static 'icons/icons8-tick.svg' %}" style="width: 24px;height: 24px">
+                                <span>Structured user training sessions</span>
+                              </li>
+                              <li>
+                                <img src="{% static 'icons/icons8-tick.svg' %}" style="width: 24px;height: 24px">
+                                <span>Role-based training for each department</span>
+                              </li>
+                              <li>
+                                <img src="{% static 'icons/icons8-tick.svg' %}" style="width: 24px;height: 24px">
+                                <span>Full system walkthroughs and hands-on practice</span>
+                              </li>
+                              <li>
+                                <img src="{% static 'icons/icons8-tick.svg' %}" style="width: 24px;height: 24px">
+                                <span>Post-training Q&A and knowledge assessments</span>
+                              </li>
+                            </ul>
+
+                          <div class="odoo-tags">
+                            <span class="odoo-tag">On-site Training</span>
+                            <span class="odoo-tag">Remote Sessions</span>
+                            <span class="odoo-tag">Video Guides</span>
+                          </div>
+
+                      </div>
+
+                      <div class="col">
+
+                          <div class="svc-image-wrap">
+                              <img src="{% static 'images/2149241263.jpg' %}" alt="ERP Implementation">
+                              <div class="img-teal-overlay"></div>
+                              <div class="svc-image-badge">
+                                <div class="badge-icon"><i class="bi bi-people-fill"></i></div>
+                                <span>Role-based training</span>
+                              </div>
+                            </div>
+
+                      </div>
+
+                  </div>
+              </div>
+          </div>
+
+          <div class="tab-pane fade" id="pills-demo" role="tabpanel" aria-labelledby="pills-demo-tab">
+            <div class="container my-5">
+              <div class="row row-cols-1 row-cols-md-2 g-5">
+
+                  <div class="col">
+
+                      <div class="svc-image-wrap">
+                          <img src="{% static 'images/photo-1551434678-e076c223a692.jfif' %}" alt="ERP Implementation">
+                          <div class="img-teal-overlay"></div>
+                          <div class="svc-image-badge">
+                            <div class="badge-icon"><i class="bi bi-people-fill"></i></div>
+                            <span>Long-Term Partnership Services</span>
+                          </div>
+                        </div>
+
+                  </div>
+
+                  <div class="col">
+
+                      <div class="section-tag">Ongoing Excellence</div>
+                      <h2 class="heading-1 text-start mt-0">Demo & Learning Support</h2>
+                      <p class="odoo-text">
+                          Interactive resources, guided demo database access, and step-by-step tutorial videos to help clients explore the system before and after implementation.
+                      </p>
+
+                      <ul class="scope-list d-none">
+                          <li>
+                            <img src="{% static 'icons/icons8-tick.svg' %}" style="width: 24px;height: 24px">
+                            <span>Structured user training sessions</span>
+                          </li>
+                          <li>
+                            <img src="{% static 'icons/icons8-tick.svg' %}" style="width: 24px;height: 24px">
+                            <span>Role-based training for each department</span>
+                          </li>
+                          <li>
+                            <img src="{% static 'icons/icons8-tick.svg' %}" style="width: 24px;height: 24px">
+                            <span>Full system walkthroughs and hands-on practice</span>
+                          </li>
+                          <li>
+                            <img src="{% static 'icons/icons8-tick.svg' %}" style="width: 24px;height: 24px">
+                            <span>Post-training Q&A and knowledge assessments</span>
+                          </li>
+                        </ul>
+
+                      <div class="odoo-tags">
+                        <span class="odoo-tag">Demo Database</span>
+                        <span class="odoo-tag">Tutorial Videos</span>
+                        <span class="odoo-tag">User Guides</span>
+                      </div>
+
+                  </div>
+
+              </div>
+            </div>
+          </div>
+
+          <div class="tab-pane fade" id="pills-support" role="tabpanel" aria-labelledby="pills-support-tab">
+            <div class="container my-5">
+              <div class="row row-cols-1 row-cols-md-2 g-5">
+
+                  <div class="col">
+
+                      <div class="section-tag">Ongoing Excellence</div>
+                      <h2 class="heading-1 text-start mt-0">Maintenance & Support</h2>
+                      <p class="odoo-text">
+                          Continuous technical support to ensure your system runs smoothly and efficiently after go-live — with rapid issue resolution and performance optimization.
+                      </p>
+
+                      <ul class="scope-list d-none">
+                          <li>
+                            <img src="{% static 'icons/icons8-tick.svg' %}" style="width: 24px;height: 24px">
+                            <span>Structured user training sessions</span>
+                          </li>
+                          <li>
+                            <img src="{% static 'icons/icons8-tick.svg' %}" style="width: 24px;height: 24px">
+                            <span>Role-based training for each department</span>
+                          </li>
+                          <li>
+                            <img src="{% static 'icons/icons8-tick.svg' %}" style="width: 24px;height: 24px">
+                            <span>Full system walkthroughs and hands-on practice</span>
+                          </li>
+                          <li>
+                            <img src="{% static 'icons/icons8-tick.svg' %}" style="width: 24px;height: 24px">
+                            <span>Post-training Q&A and knowledge assessments</span>
+                          </li>
+                        </ul>
+
+                      <div class="odoo-tags">
+                        <span class="odoo-tag">Bug Fixing</span>
+                        <span class="odoo-tag">Monitoring</span>
+                        <span class="odoo-tag">Performance</span>
+                      </div>
+
+                  </div>
+
+                  <div class="col">
+
+                      <div class="svc-image-wrap">
+                          <img src="{% static 'images/6679.jpg' %}" alt="ERP Implementation">
+                          <div class="img-teal-overlay"></div>
+                          <div class="svc-image-badge">
+                            <div class="badge-icon"><i class="bi bi-people-fill"></i></div>
+                            <span>Long-Term Partnership Services</span>
+                          </div>
+                        </div>
+
+                  </div>
+
+              </div>
+            </div>
+          </div>
+
+          <div class="tab-pane fade" id="pills-amc" role="tabpanel" aria-labelledby="pills-amc-tab">
+              <div class="container my-5">
+              <div class="row row-cols-1 row-cols-md-2 g-5">
+
+                  <div class="col">
+
+                      <div class="svc-image-wrap">
+                          <img src="{% static 'images/20070.jpg' %}" alt="ERP Implementation">
+                          <div class="img-teal-overlay"></div>
+                          <div class="svc-image-badge">
+                            <div class="badge-icon"><i class="bi bi-people-fill"></i></div>
+                            <span>Long-Term Partnership Services</span>
+                          </div>
+                        </div>
+
+                  </div>
+
+                  <div class="col">
+
+                      <div class="section-tag">Ongoing Excellence</div>
+                      <h2 class="heading-1 text-start mt-0">Annual Maintenance Contract (AMC)</h2>
+                      <p class="odoo-text">
+                          Long-term AMC plans for comprehensive system maintenance, periodic updates, and preventive care — ensuring uninterrupted operations year-round.
+                      </p>
+
+                      <ul class="scope-list d-none">
+                          <li>
+                            <img src="{% static 'icons/icons8-tick.svg' %}" style="width: 24px;height: 24px">
+                            <span>Structured user training sessions</span>
+                          </li>
+                          <li>
+                            <img src="{% static 'icons/icons8-tick.svg' %}" style="width: 24px;height: 24px">
+                            <span>Role-based training for each department</span>
+                          </li>
+                          <li>
+                            <img src="{% static 'icons/icons8-tick.svg' %}" style="width: 24px;height: 24px">
+                            <span>Full system walkthroughs and hands-on practice</span>
+                          </li>
+                          <li>
+                            <img src="{% static 'icons/icons8-tick.svg' %}" style="width: 24px;height: 24px">
+                            <span>Post-training Q&A and knowledge assessments</span>
+                          </li>
+                        </ul>
+
+                      <div class="odoo-tags">
+                        <span class="odoo-tag">Ongoing Support</span>
+                        <span class="odoo-tag">Updates</span>
+                        <span class="odoo-tag">Preventive Care</span>
+                      </div>
+
+                  </div>
+
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+    </div>
+
+    <section class="process-section mt-5">
+
+        <div class="container">
+            <div class="section-tag d-flex justify-content-center text-center" style="color:#1ec8a0;">How We Work</div>
+            <h2 class="heading-1 text-center text-white mt-0">Our Implementation Process</h2>
+
+            <div class="row align-items-start g-3 reveal visible mt-5">
+
+              <div class="col process-step">
+                <div class="step-num">01</div>
+                <h6>Discovery</h6>
+                <p>Requirement analysis and process mapping</p>
+              </div>
+              <div class="col-auto step-arrow d-none d-md-flex"><i class="bi bi-chevron-right"></i></div>
+
+              <div class="col process-step">
+                <div class="step-num">02</div>
+                <h6>Solution Design</h6>
+                <p>Architecture, gap analysis and roadmap</p>
+              </div>
+              <div class="col-auto step-arrow d-none d-md-flex"><i class="bi bi-chevron-right"></i></div>
+
+              <div class="col process-step">
+                <div class="step-num">03</div>
+                <h6>Development</h6>
+                <p>Customization, configuration and build</p>
+              </div>
+              <div class="col-auto step-arrow d-none d-md-flex"><i class="bi bi-chevron-right"></i></div>
+
+              <div class="col process-step">
+                <div class="step-num">04</div>
+                <h6>Testing &amp; UAT</h6>
+                <p>Validation cycles and user acceptance</p>
+              </div>
+              <div class="col-auto step-arrow d-none d-md-flex"><i class="bi bi-chevron-right"></i></div>
+
+              <div class="col process-step">
+                <div class="step-num">05</div>
+                <h6>Go-Live</h6>
+                <p>Deployment, training and stabilization</p>
+              </div>
+              <div class="col-auto step-arrow d-none d-md-flex"><i class="bi bi-chevron-right"></i></div>
+
+              <div class="col process-step">
+                <div class="step-num">06</div>
+                <h6>Support</h6>
+                <p>Ongoing maintenance and continuous improvement</p>
+              </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="cta-banner">
+
+        <div class="container">
+          <div class="row align-items-center g-4">
+              <div class="col-lg-7">
+                  <h2 class="heading-1 text-start text-white mt-0">Ready to Get Started?</h2>
+                  <p class="odoo-text text-white" style="max-width: 26rem;">
+                      Tell us about your business and we'll show you exactly how GrowBiz ERP can streamline your operations — no pressure, just clarity.
+                  </p>
+              </div>
+              <div class="col-lg-5 d-flex flex-wrap gap-3 justify-content-lg-end">
+                <a href="{% url 'code_app:contact' %}" class="btn-cta-primary">
+                  Request a Demo <i class="bi bi-arrow-right"></i>
+                </a>
+                <a href="tel:" class="btn-cta-ghost">
+                  <i class="bi bi-telephone"></i> Call Us
+                </a>
+              </div>
+          </div>
+        </div>
+
+    </section>
+
+
+{% endblock %}

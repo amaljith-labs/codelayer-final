@@ -172,7 +172,7 @@ body {
 }
 
 .navbar-brand img {
-    height: 2.5rem;
+    height: 3rem;
     width: auto;
   }
 
@@ -4106,6 +4106,13 @@ body {
     border-color: rgba(30, 200, 160, .38);
     color: #1ec8a0;
     transform: translateY(-2px);
+}
+
+@media (min-width: 992px) {
+    .col-lg-custom-5 {
+        flex: 0 0 20%;
+        max-width: 20%;
+    }
 }
 
 .team-card {
